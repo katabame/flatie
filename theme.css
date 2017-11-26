@@ -25,8 +25,9 @@ img.emoji {
   border-radius: 0;
 }
 .bot-tag,
+span[class*="botTag-"],
 .renamer-tag {
-  border-radius: 0;
+  border-radius: 0 !important;
 }
 /* Radial Status */
 .channel-members .member .status {
@@ -63,7 +64,8 @@ img.emoji {
   border-color: #593695 !important;
 }
 /* UserPopup */
-div[class*="userPopout-"] {
+div[class*="userPopout-"],
+div[class*=".assetsLargeImage-"] {
   border-radius: 0;
 }
 div[class*="headerNormal-"] {
@@ -87,4 +89,19 @@ div[class*="avatarStatus"] {
 }
 .member-role .name {
   color: #fff !important;
+}
+/* Speaking Indicator */
+div[class*="avatarSpeaking-"] {
+  border-color: transparent !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  z-index: 10;
+}
+div[class*="avatarSpeaking-"]::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  width: 4px;
+  height: 20px;
+  background: #43b581;
 }

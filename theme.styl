@@ -25,8 +25,8 @@ img.emoji
 	box-shadow: none
 	border-radius: 0
 
-.bot-tag, .renamer-tag // Support renamer plugin https://github.com/megamit/repository/tree/gh-pages/renamer
-	border-radius: 0
+.bot-tag, span[class*="botTag-"], .renamer-tag // Support renamer plugin https://github.com/megamit/repository/tree/gh-pages/renamer
+	border-radius: 0 !important
 
 /* Radial Status */
 .channel-members
@@ -59,7 +59,8 @@ img.emoji
 				border-color: #593695 !important
 
 /* UserPopup */
-div[class*="userPopout-"]
+div[class*="userPopout-"],
+div[class*=".assetsLargeImage-"] // discord integration
 	border-radius: 0
 
 // Header
@@ -83,3 +84,16 @@ div[class*="avatarStatus"] // clear status border
 	background: currentColor !important
 	.name
 		color: white !important
+
+/* Speaking Indicator */
+div[class*="avatarSpeaking-"]
+	border-color: transparent !important
+	box-shadow: none !important
+	z-index: 10
+	&::before
+		content: ""
+		position: absolute
+		left: -5px
+		width: 4px
+		height: 20px
+		background: #43b581
