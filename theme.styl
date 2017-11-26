@@ -1,0 +1,85 @@
+/*
+flatie
+	by @katabame#3778
+	github.com/katabame/flatie
+*/
+
+// Support Twemoji plugin https://gist.github.com/allanf181/5f49b7e5732009b6225624e99045a4ba
+img.emoji
+	height: 1em
+	width: 1em
+	margin: 0 .05em 0 .1em
+	vertical-align: -0.1em
+	min-height: 0
+	min-width: 0
+
+/* Squared Indicator */
+.unread-mentions-indicator-bottom
+	div[class*="mention-"]
+		background-color: #f04747
+	div[class*="bar-"]
+		border-radius: 0
+
+.badge
+	text-shadow: none
+	box-shadow: none
+	border-radius: 0
+
+.bot-tag, .renamer-tag // Support renamer plugin https://github.com/megamit/repository/tree/gh-pages/renamer
+	border-radius: 0
+
+/* Radial Status */
+.channel-members
+	.member
+		.status
+			width: 100% !important
+			background: transparent
+			border-radius: inherit
+			height: 100%
+			right: -4px !important
+			bottom: -4px
+			padding: 2px
+			border-width: 2px
+			margin: 0
+			&.status-online
+				border-color: #43b581 !important
+			&.status-idle
+				border-color: #faa61a !important
+			&.status-dnd
+				border-color: #f04747 !important
+			&.status-offline
+				border-color: #636b75 !important
+			&.status-typing
+				background-color: rgba(0, 0, 0, 0.8) !important
+				.spinner
+					.spinner-inner
+						left: 1px !important
+						top: 1px !important
+		.status-streaming.status
+				border-color: #593695 !important
+
+/* UserPopup */
+div[class*="userPopout-"]
+	border-radius: 0
+
+// Header
+div[class*="headerNormal-"] // header color
+	background: #212121
+
+div[class*="avatarNormal-"] // avatar border
+	border-color: #f5f5f5
+
+div[class*="avatarStatus"] // clear status border
+	border-color: transparent !important
+
+// Body
+.member-role-add, .member-role-remove, // clear Role button
+.footer-2J5zqP//div[class*="footer-"] // clear User-popup footer
+	display: none !important
+
+.member-role // beauful Role
+	border: none !important
+	border-radius: 0 !important
+	background: currentColor !important
+	.name
+		color: white !important
