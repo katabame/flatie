@@ -3,94 +3,153 @@ flatie
 	by @katabame#3778
 	github.com/katabame/flatie
 */
-img.emoji {
-  height: 1em;
-  width: 1em;
-  margin: 0 0.05em 0 0.1em;
-  vertical-align: -0.1em;
-  min-height: 0;
-  min-width: 0;
+@import url("https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css");
+@import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
+body {
+  font-family: Whitney, "Helvetica Nene", Helvetica, Arial, sans-serif, "Rounded M+ 1c", "Noto Sans Japanese";
 }
-/* Squared Indicator */
-.unread-mentions-indicator-bottom div[class*="mention-"] {
-  background-color: #f04747;
+div[class*="avatar-small"],
+div[class*="avatar-large"],
+div[class*="avatarDefault-"],
+div[class*="avatarSpeaking-"],
+div[class*="avatar-"] > div[class*="image-"] {
+  border-radius: 5px;
 }
-.unread-mentions-indicator-bottom div[class*="bar-"] {
+div[class*="mask-"],
+div[class*="maskProfile-"] {
+  -webkit-mask: none;
+  mask: none;
+}
+div[class*="avatarHint-"] {
+  border-radius: 5px;
+}
+div[class*="base-"],
+li[class*="role-"],
+div[class*="notice-"],
+button[class*="button-"],
+.search .search-bar,
+.search-popout,
+.option .search-option:hover {
   border-radius: 0;
 }
-.badge {
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+.popout > div[class*="userPopout-"] {
   border-radius: 0;
 }
-.bot-tag,
-span[class*="botTag-"],
-.renamer-tag {
+.popout > div[class*="userPopout-"] > div[class*="footer-"] {
+  display: none;
+}
+.popout > div[class*="menu-"] {
+  background-color: #202020;
+  border-radius: 0;
+}
+.popout > div[class*="menu-"] > div[class*="separator-"] {
+  border-color: #404040;
+}
+.popout > div[class*="attachPopout-"] {
+  background-color: #202020;
+  border-radius: 0;
+}
+.popout > div[class*="attachPopout-"] > div[class*="attachPopoutRow-"]:hover {
+  background-color: #303030;
+  border-radius: 0;
+}
+.popout > div[class*="container-"] > header,
+.popout > div[class*="container-"] > section {
+  border-radius: 0;
+}
+div[class*="inner-"] > div[class*="modal-"] {
+  background-color: #202020;
+  border-radius: 0;
+}
+span[class*="botTag-"] {
   border-radius: 0 !important;
 }
-/* Radial Status */
-.channel-members .member .status {
-  width: 100% !important;
-  background: transparent;
-  border-radius: inherit;
-  height: 100%;
-  right: -4px !important;
-  bottom: -4px;
-  padding: 2px;
-  border-width: 2px;
-  margin: 0;
+.search-popout {
+  background-color: #303030;
 }
-.channel-members .member .status.status-online {
-  border-color: #43b581 !important;
+.search-popout .search-query {
+  color: #e0e0e0;
 }
-.channel-members .member .status.status-idle {
-  border-color: #faa61a !important;
+.search-popout .search-query .search-for strong {
+  color: #a0a0a0;
 }
-.channel-members .member .status.status-dnd {
-  border-color: #f04747 !important;
+.search-popout .search-query.selected {
+  color: #424242;
 }
-.channel-members .member .status.status-offline {
-  border-color: #636b75 !important;
+.search-popout .search-query.selected .search-for strong {
+  color: #606060;
 }
-.channel-members .member .status.status-typing {
-  background-color: rgba(0,0,0,0.8) !important;
+.search-popout .option:after {
+  background: none;
 }
-.channel-members .member .status.status-typing .spinner .spinner-inner {
-  left: 1px !important;
-  top: 1px !important;
+.search-popout .option.selected {
+  border-radius: 0;
+  background-color: #f5f5f5;
 }
-.channel-members .member .status-streaming.status {
-  border-color: #593695 !important;
+.search-popout .option.selected:after {
+  background: none;
 }
-/* UserPopup */
-div[class*="userPopout-"],
-div[class*=".assetsLargeImage-"] {
+.search-popout .option.selected > .filter,
+.search-popout .option.selected strong,
+.search-popout .option.selected.user .display-username {
+  color: #424242;
+}
+.search-popout .option.selected > .answer,
+.search-popout .option.selected > .non-text,
+.search-popout .option.selected.user .displayed-nick {
+  color: #606060;
+}
+.search-popout .option > .filter,
+.search-popout .option strong,
+.search-popout .option.user .display-username {
+  color: #e0e0e0;
+}
+.search-popout .option > .answer,
+.search-popout .option > .non-text,
+.search-popout .option.user .displayed-nick {
+  color: #a0a0a0;
+}
+#friends .tab-bar .tab-bar-item,
+form[class*="wrapper-"],
+#friends .btn,
+.private-channels .channel a,
+.private-channels .channel a:hover {
   border-radius: 0;
 }
-div[class*="headerNormal-"] {
-  background: #212121;
+.private-channels header {
+  background-color: transparent;
 }
-div[class*="avatarNormal-"] {
-  border-color: #f5f5f5;
+.private-channels .search-bar,
+div[class*="headerBar-"] {
+  background-color: #202020 !important;
 }
-div[class*="avatarStatus"] {
-  border-color: transparent !important;
+#friends,
+.friends-table {
+  background-color: #404040 !important;
 }
-.member-role-add,
-.member-role-remove,
-.footer-2J5zqP {
-  display: none !important;
+.guilds-wrapper {
+  background-color: #202020;
 }
-.member-role {
-  border: none !important;
-  border-radius: 0 !important;
-  background: currentColor !important;
+.guilds-wrapper .guilds .guild .guild-inner,
+.guilds-wrapper .guild-error,
+.guilds-wrapper .guilds-add {
+  border-radius: 5px !important;
 }
-.member-role .name {
-  color: #fff !important;
+div[class*="channels-"] > * {
+  background-color: #303030;
 }
-/* Speaking Indicator */
+div[class*="channels-"] > :nth-last-child(1),
+div[class*="channels-"] > :nth-last-child(2) {
+  background-color: #202020;
+  border: none;
+}
+header {
+  background-color: #202020;
+}
+div[class*="content-"],
+div[class*="bar-"] {
+  border-radius: 0;
+}
 div[class*="avatarSpeaking-"] {
   border-color: transparent !important;
   -webkit-box-shadow: none !important;
@@ -104,4 +163,937 @@ div[class*="avatarSpeaking-"]::before {
   width: 4px;
   height: 20px;
   background: #43b581;
+}
+.chat > div[class*="titleWrapper-"] > div {
+  background-color: #202020;
+}
+.chat > .content,
+.chat .messages-wrapper,
+.chat form,
+.chat div[class*="typing-"],
+.chat .divider span {
+  background-color: #404040 !important;
+}
+.chat div[class*="membersWrap-"] div[class*="members-"] {
+  background-color: #303030;
+}
+.chat .new-messages-bar,
+.chat .jump-to-present-bar {
+  border-radius: 0;
+}
+div[class*="message"] > .accessory > div[class*="embed-"] > div[class*="embedPill-"],
+div[class*="message"] > .accessory > div[class*="embed-"] > div[class*="embedInner-"] {
+  border-radius: 0;
+}
+div[class*="innerNoAutocomplete-"] {
+  border-radius: 0;
+}
+.message-group .comment .markup pre,
+.message-group .comment .markup code.inline {
+  border-radius: 0;
+}
+.create-guild-container.deprecated .create-or-join .form-inner {
+  background-color: #fff;
+  border-radius: 0;
+}
+.create-guild-container.deprecated .create-or-join .form-inner > header {
+  background-color: transparent;
+}
+.create-guild-container.deprecated .create-or-join .form-inner .action {
+  border-radius: 0;
+}
+.create-guild-container.deprecated .create-or-join .form-inner .action .btn {
+  border-radius: 0;
+}
+div[class*="root-"],
+div[class*="connectedAccount-"] {
+  border-radius: 0;
+}
+.message-group .hljs:before {
+  pointer-events: none;
+  display: block;
+  margin: 0 0 10px 0;
+  font-family: 'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+.message-group .hljs[class~="1c"i]:before {
+  content: "1c";
+}
+.message-group .hljs[class~="abnf"i]:before {
+  content: "ABNF";
+}
+.message-group .hljs[class~="accesslog"i]:before {
+  content: "Access Log";
+}
+.message-group .hljs[class~="actionscript"i]:before {
+  content: "ActionScript";
+}
+.message-group .hljs[class~="as"i]:before {
+  content: "ActionScript";
+}
+.message-group .hljs[class~="ada"i]:before {
+  content: "Ada";
+}
+.message-group .hljs[class~="apache"i]:before {
+  content: "Apache";
+}
+.message-group .hljs[class~="apacheconf"i]:before {
+  content: "Apache";
+}
+.message-group .hljs[class~="applescript"i]:before {
+  content: "Applescript";
+}
+.message-group .hljs[class~="osascript"i]:before {
+  content: "Applescript";
+}
+.message-group .hljs[class~="arduino"i]:before {
+  content: "Arduino";
+}
+.message-group .hljs[class~="armasm"i]:before {
+  content: "ARM Assembly";
+}
+.message-group .hljs[class~="arm"i]:before {
+  content: "ARM Assembly";
+}
+.message-group .hljs[class~="asciidoc"i]:before {
+  content: "AsciiDoc";
+}
+.message-group .hljs[class~="adoc"i]:before {
+  content: "AsciiDoc";
+}
+.message-group .hljs[class~="aspectj"i]:before {
+  content: "AspectJ";
+}
+.message-group .hljs[class~="atom"i]:before {
+  content: "Atom Feed (XML)";
+}
+.message-group .hljs[class~="autohotkey"i]:before {
+  content: "AutoHotkey";
+}
+.message-group .hljs[class~="autoit"i]:before {
+  content: "AutoIt";
+}
+.message-group .hljs[class~="avrasm"i]:before {
+  content: "AVR Assembler";
+}
+.message-group .hljs[class~="awk"i]:before {
+  content: "Awk";
+}
+.message-group .hljs[class~="mawk"i]:before {
+  content: "Awk";
+}
+.message-group .hljs[class~="nawk"i]:before {
+  content: "Awk";
+}
+.message-group .hljs[class~="gawk"i]:before {
+  content: "Awk";
+}
+.message-group .hljs[class~="axapta"i]:before {
+  content: "Axapta";
+}
+.message-group .hljs[class~="bash"i]:before {
+  content: "Bash";
+}
+.message-group .hljs[class~="sh"i]:before {
+  content: "Bash";
+}
+.message-group .hljs[class~="zsh"i]:before {
+  content: "Bash";
+}
+.message-group .hljs[class~="basic"i]:before {
+  content: "Basic";
+}
+.message-group .hljs[class~="dos"i]:before {
+  content: "Batch";
+}
+.message-group .hljs[class~="bat"i]:before {
+  content: "Batch";
+}
+.message-group .hljs[class~="cmd"i]:before {
+  content: "Batch";
+}
+.message-group .hljs[class~="bnf"i]:before {
+  content: "BNF";
+}
+.message-group .hljs[class~="brainfuck"i]:before {
+  content: "Brainfuck";
+}
+.message-group .hljs[class~="c"i]:before {
+  content: "C/C++";
+}
+.message-group .hljs[class~="cc"i]:before {
+  content: "C/C++";
+}
+.message-group .hljs[class~="cpp"i]:before {
+  content: "C/C++";
+}
+.message-group .hljs[class~="h"i]:before {
+  content: "C/C++";
+}
+.message-group .hljs[class~="hpp"i]:before {
+  content: "C/C++";
+}
+.message-group .hljs[class~="cs"i]:before {
+  content: "C#";
+}
+.message-group .hljs[class~="csharp"i]:before {
+  content: "C#";
+}
+.message-group .hljs[class~="cal"i]:before {
+  content: "CAL";
+}
+.message-group .hljs[class~="capnproto"i]:before {
+  content: "Cap'n Proto";
+}
+.message-group .hljs[class~="capnp"i]:before {
+  content: "Cap'n Proto";
+}
+.message-group .hljs[class~="ceylon"i]:before {
+  content: "Ceylon";
+}
+.message-group .hljs[class~="clean"i]:before {
+  content: "Clean";
+}
+.message-group .hljs[class~="clojure"i]:before {
+  content: "Clojure";
+}
+.message-group .hljs[class~="clj"i]:before {
+  content: "Clojure";
+}
+.message-group .hljs[class~="clojure-repl"i]:before {
+  content: "Clojure REPL";
+}
+.message-group .hljs[class~="cmake"i]:before {
+  content: "CMake";
+}
+.message-group .hljs[class~="coffeescript"i]:before {
+  content: "CoffeeScript";
+}
+.message-group .hljs[class~="coffee"i]:before {
+  content: "CoffeeScript";
+}
+.message-group .hljs[class~="cson"i]:before {
+  content: "CoffeeScript";
+}
+.message-group .hljs[class~="iced"i]:before {
+  content: "CoffeeScript";
+}
+.message-group .hljs[class~="coq"i]:before {
+  content: "Coq";
+}
+.message-group .hljs[class~="cos"i]:before {
+  content: "Caché Object Script";
+}
+.message-group .hljs[class~="cls"i]:before {
+  content: "Caché Object Script";
+}
+.message-group .hljs[class~="podspec"i]:before {
+  content: "CocoaPod";
+}
+.message-group .hljs[class~="crmsh"i]:before {
+  content: "crmsh";
+}
+.message-group .hljs[class~="crm"i]:before {
+  content: "crmsh";
+}
+.message-group .hljs[class~="pcmk"i]:before {
+  content: "crmsh";
+}
+.message-group .hljs[class~="crystal"i]:before {
+  content: "Crystal";
+}
+.message-group .hljs[class~="csp"i]:before {
+  content: "CSP";
+}
+.message-group .hljs[class~="css"i]:before {
+  content: "CSS";
+}
+.message-group .hljs[class~="d"i]:before {
+  content: "D";
+}
+.message-group .hljs[class~="dart"i]:before {
+  content: "Dart";
+}
+.message-group .hljs[class~="delphi"i]:before {
+  content: "Delphi (Object Pascal)";
+}
+.message-group .hljs[class~="dfm"i]:before {
+  content: "Delphi (Object Pascal)";
+}
+.message-group .hljs[class~="dpr"i]:before {
+  content: "Delphi (Object Pascal)";
+}
+.message-group .hljs[class~="diff"i]:before {
+  content: "Diff";
+}
+.message-group .hljs[class~="patch"i]:before {
+  content: "Diff";
+}
+.message-group .hljs[class~="django"i]:before {
+  content: "Django";
+}
+.message-group .hljs[class~="jinja"i]:before {
+  content: "Django";
+}
+.message-group .hljs[class~="dns"i]:before {
+  content: "DNS Zone File";
+}
+.message-group .hljs[class~="dockerfile"i]:before {
+  content: "Dockerfile";
+}
+.message-group .hljs[class~="docker"i]:before {
+  content: "Dockerfile";
+}
+.message-group .hljs[class~="dsconfig"i]:before {
+  content: "dsconfig";
+}
+.message-group .hljs[class~="dts"i]:before {
+  content: "Device Tree";
+}
+.message-group .hljs[class~="dust"i]:before {
+  content: "Dust";
+}
+.message-group .hljs[class~="ebnf"i]:before {
+  content: "EBNF";
+}
+.message-group .hljs[class~="elixir"i]:before {
+  content: "Elixir";
+}
+.message-group .hljs[class~="elm"i]:before {
+  content: "Elm";
+}
+.message-group .hljs[class~="erb"i]:before {
+  content: "ERB";
+}
+.message-group .hljs[class~="erlang"i]:before {
+  content: "Erlang";
+}
+.message-group .hljs[class~="erl"i]:before {
+  content: "Erlang";
+}
+.message-group .hljs[class~="erlang-repl"i]:before {
+  content: "Erlang REPL";
+}
+.message-group .hljs[class~="excel"i]:before {
+  content: "Excel";
+}
+.message-group .hljs[class~="xls"i]:before {
+  content: "Excel";
+}
+.message-group .hljs[class~="xlsx"i]:before {
+  content: "Excel";
+}
+.message-group .hljs[class~="fs"i]:before {
+  content: "F#";
+}
+.message-group .hljs[class~="fsharp"i]:before {
+  content: "F#";
+}
+.message-group .hljs[class~="fix"i]:before {
+  content: "Fix";
+}
+.message-group .hljs[class~="flix"i]:before {
+  content: "Flix";
+}
+.message-group .hljs[class~="fortran"i]:before {
+  content: "Fortran";
+}
+.message-group .hljs[class~="f90"i]:before {
+  content: "Fortran";
+}
+.message-group .hljs[class~="f95"i]:before {
+  content: "Fortran";
+}
+.message-group .hljs[class~="gams"i]:before {
+  content: "GAMS";
+}
+.message-group .hljs[class~="gms"i]:before {
+  content: "GAMS";
+}
+.message-group .hljs[class~="gauss"i]:before {
+  content: "Gauss";
+}
+.message-group .hljs[class~="gss"i]:before {
+  content: "Gauss";
+}
+.message-group .hljs[class~="gcode"i]:before {
+  content: "G-code";
+}
+.message-group .hljs[class~="nc"i]:before {
+  content: "G-code";
+}
+.message-group .hljs[class~="gherkin"i]:before {
+  content: "Gherkin";
+}
+.message-group .hljs[class~="glsl"i]:before {
+  content: "GLSL";
+}
+.message-group .hljs[class~="go"i]:before {
+  content: "Go";
+}
+.message-group .hljs[class~="golang"i]:before {
+  content: "Go";
+}
+.message-group .hljs[class~="golo"i]:before {
+  content: "Golo";
+}
+.message-group .hljs[class~="gololang"i]:before {
+  content: "Golo";
+}
+.message-group .hljs[class~="gradle"i]:before {
+  content: "Gradle";
+}
+.message-group .hljs[class~="groovy"i]:before {
+  content: "Groovy";
+}
+.message-group .hljs[class~="haml"i]:before {
+  content: "Haml";
+}
+.message-group .hljs[class~="handlebars"i]:before {
+  content: "Handlebars";
+}
+.message-group .hljs[class~="hbs"i]:before {
+  content: "Handlebars";
+}
+.message-group .hljs[class~="haskell"i]:before {
+  content: "Haskell";
+}
+.message-group .hljs[class~="hs"i]:before {
+  content: "Haskell";
+}
+.message-group .hljs[class~="haxe"i]:before {
+  content: "Haxe";
+}
+.message-group .hljs[class~="hx"i]:before {
+  content: "Haxe";
+}
+.message-group .hljs[class~="hsp"i]:before {
+  content: "HSP";
+}
+.message-group .hljs[class~="html"i]:before {
+  content: "HTML";
+}
+.message-group .hljs[class~="htmlbars"i]:before {
+  content: "HTMLBars";
+}
+.message-group .hljs[class~="http"i]:before {
+  content: "HTTP";
+}
+.message-group .hljs[class~="https"i]:before {
+  content: "HTTPS";
+}
+.message-group .hljs[class~="hy"i]:before {
+  content: "Hy";
+}
+.message-group .hljs[class~="hylang"i]:before {
+  content: "Hy";
+}
+.message-group .hljs[class~="inform7"i]:before {
+  content: "Inform7";
+}
+.message-group .hljs[class~="i7"i]:before {
+  content: "Inform7";
+}
+.message-group .hljs[class~="ini"i]:before {
+  content: "Ini";
+}
+.message-group .hljs[class~="irpf90"i]:before {
+  content: "IRPF90";
+}
+.message-group .hljs[class~="java"i]:before {
+  content: "Java";
+}
+.message-group .hljs[class~="jsp"i]:before {
+  content: "Java";
+}
+.message-group .hljs[class~="javascript"i]:before {
+  content: "JavaScript (Babel)";
+}
+.message-group .hljs[class~="js"i]:before {
+  content: "JavaScript (Babel)";
+}
+.message-group .hljs[class~="jsx"i]:before {
+  content: "JavaScript (Babel)";
+}
+.message-group .hljs[class~="xjb"i]:before {
+  content: "JAXB (XML)";
+}
+.message-group .hljs[class~="jboss-cli"i]:before {
+  content: "JBoss CLI";
+}
+.message-group .hljs[class~="json"i]:before {
+  content: "JSON";
+}
+.message-group .hljs[class~="julia"i]:before {
+  content: "Julia";
+}
+.message-group .hljs[class~="julia-repl"i]:before {
+  content: "Julia REPL";
+}
+.message-group .hljs[class~="kotlin"i]:before {
+  content: "Kotlin";
+}
+.message-group .hljs[class~="lasso"i]:before {
+  content: "Lasso";
+}
+.message-group .hljs[class~="lassoscript"i]:before {
+  content: "Lasso";
+}
+.message-group .hljs[class~="ls"i]:before {
+  content: "Lasso";
+}
+.message-group .hljs[class~="ldif"i]:before {
+  content: "LDIF";
+}
+.message-group .hljs[class~="leaf"i]:before {
+  content: "Leaf";
+}
+.message-group .hljs[class~="less"i]:before {
+  content: "Less";
+}
+.message-group .hljs[class~="lisp"i]:before {
+  content: "Lisp";
+}
+.message-group .hljs[class~="livecodeserver"i]:before {
+  content: "LiveCode Server";
+}
+.message-group .hljs[class~="livescript"i]:before {
+  content: "LiveScript";
+}
+.message-group .hljs[class~="ls"i]:before {
+  content: "LiveScript";
+}
+.message-group .hljs[class~="llvm"i]:before {
+  content: "LLVM IR";
+}
+.message-group .hljs[class~="lsl"i]:before {
+  content: "LSL";
+}
+.message-group .hljs[class~="lua"i]:before {
+  content: "Lua";
+}
+.message-group .hljs[class~="makefile"i]:before {
+  content: "Makefile";
+}
+.message-group .hljs[class~="mk"i]:before {
+  content: "Makefile";
+}
+.message-group .hljs[class~="mak"i]:before {
+  content: "Makefile";
+}
+.message-group .hljs[class~="markdown"i]:before {
+  content: "Markdown";
+}
+.message-group .hljs[class~="md"i]:before {
+  content: "Markdown";
+}
+.message-group .hljs[class~="mkd"i]:before {
+  content: "Markdown";
+}
+.message-group .hljs[class~="mkdown"i]:before {
+  content: "Markdown";
+}
+.message-group .hljs[class~="mathematica"i]:before {
+  content: "Mathematica";
+}
+.message-group .hljs[class~="mma"i]:before {
+  content: "Mathematica";
+}
+.message-group .hljs[class~="matlab"i]:before {
+  content: "MatLab";
+}
+.message-group .hljs[class~="maxima"i]:before {
+  content: "Maxima";
+}
+.message-group .hljs[class~="mel"i]:before {
+  content: "MEL";
+}
+.message-group .hljs[class~="mercury"i]:before {
+  content: "Mercury";
+}
+.message-group .hljs[class~="mipsasm"i]:before {
+  content: "MISP Assembly";
+}
+.message-group .hljs[class~="mips"i]:before {
+  content: "MISP Assembly";
+}
+.message-group .hljs[class~="routeros"i]:before {
+  content: "Microtik RouterOS script";
+}
+.message-group .hljs[class~="mizar"i]:before {
+  content: "Mizar";
+}
+.message-group .hljs[class~="mojolicious"i]:before {
+  content: "Mojolicious";
+}
+.message-group .hljs[class~="monkey"i]:before {
+  content: "Monkey";
+}
+.message-group .hljs[class~="moonscript"i]:before {
+  content: "MoonScript";
+}
+.message-group .hljs[class~="moon"i]:before {
+  content: "MoonScript";
+}
+.message-group .hljs[class~="n1ql"i]:before {
+  content: "N1QL";
+}
+.message-group .hljs[class~="nginx"i]:before {
+  content: "Nginx";
+}
+.message-group .hljs[class~="nginxconf"i]:before {
+  content: "Nginx";
+}
+.message-group .hljs[class~="nimrod"i]:before {
+  content: "Nimrod";
+}
+.message-group .hljs[class~="nix"i]:before {
+  content: "Nix";
+}
+.message-group .hljs[class~="nsis"i]:before {
+  content: "NSIS";
+}
+.message-group .hljs[class~="objectivec"i]:before {
+  content: "Objective-C";
+}
+.message-group .hljs[class~="ocaml"i]:before {
+  content: "OCaml";
+}
+.message-group .hljs[class~="openscad"i]:before {
+  content: "OpenSCAD";
+}
+.message-group .hljs[class~="scad"i]:before {
+  content: "OpenSCAD";
+}
+.message-group .hljs[class~="ruleslanguage"i]:before {
+  content: "Oracle Rules Language";
+}
+.message-group .hljs[class~="oxygene"i]:before {
+  content: "Oxygene";
+}
+.message-group .hljs[class~="parser3"i]:before {
+  content: "Parser3";
+}
+.message-group .hljs[class~="pascal"i]:before {
+  content: "Pascal/Object Pascal";
+}
+.message-group .hljs[class~="pas"i]:before {
+  content: "Pascal/Object Pascal";
+}
+.message-group .hljs[class~="freepascal"i]:before {
+  content: "Pascal/Object Pascal";
+}
+.message-group .hljs[class~="lazarus"i]:before {
+  content: "Pascal/Object Pascal";
+}
+.message-group .hljs[class~="lfm"i]:before {
+  content: "Pascal/Object Pascal";
+}
+.message-group .hljs[class~="lpr"i]:before {
+  content: "Pascal/Object Pascal";
+}
+.message-group .hljs[class~="perl"i]:before {
+  content: "Perl";
+}
+.message-group .hljs[class~="pl"i]:before {
+  content: "Perl";
+}
+.message-group .hljs[class~="pm"i]:before {
+  content: "Perl";
+}
+.message-group .hljs[class~="pf"i]:before {
+  content: "PF";
+}
+.message-group .hljs[class~="pf.conf"i]:before {
+  content: "PF";
+}
+.message-group .hljs[class~="php"i]:before {
+  content: "PHP";
+}
+.message-group .hljs[class~="php3"i]:before {
+  content: "PHP";
+}
+.message-group .hljs[class~="php4"i]:before {
+  content: "PHP";
+}
+.message-group .hljs[class~="php5"i]:before {
+  content: "PHP";
+}
+.message-group .hljs[class~="php6"i]:before {
+  content: "PHP";
+}
+.message-group .hljs[class~="pony"i]:before {
+  content: "Pony";
+}
+.message-group .hljs[class~="powershell"i]:before {
+  content: "PowerShell";
+}
+.message-group .hljs[class~="ps"i]:before {
+  content: "PowerShell";
+}
+.message-group .hljs[class~="processing"i]:before {
+  content: "Processing";
+}
+.message-group .hljs[class~="prolog"i]:before {
+  content: "Prolog";
+}
+.message-group .hljs[class~="plist"i]:before {
+  content: "Property List";
+}
+.message-group .hljs[class~="protobuf"i]:before {
+  content: "Protocol Buffers";
+}
+.message-group .hljs[class~="puppet"i]:before {
+  content: "Puppet";
+}
+.message-group .hljs[class~="pp"i]:before {
+  content: "Puppet";
+}
+.message-group .hljs[class~="purebasic"i]:before {
+  content: "PureBASIC";
+}
+.message-group .hljs[class~="python"i]:before {
+  content: "Python";
+}
+.message-group .hljs[class~="py"i]:before {
+  content: "Python";
+}
+.message-group .hljs[class~="gyp"i]:before {
+  content: "Python";
+}
+.message-group .hljs[class~="profile"i]:before {
+  content: "Python profile";
+}
+.message-group .hljs[class~="q"i]:before {
+  content: "Q";
+}
+.message-group .hljs[class~="k"i]:before {
+  content: "Q";
+}
+.message-group .hljs[class~="kdb"i]:before {
+  content: "Q";
+}
+.message-group .hljs[class~="qml"i]:before {
+  content: "QML";
+}
+.message-group .hljs[class~="r"i]:before {
+  content: "R";
+}
+.message-group .hljs[class~="rib"i]:before {
+  content: "RenderMan RIB";
+}
+.message-group .hljs[class~="rsl"i]:before {
+  content: "RenderMan RSL";
+}
+.message-group .hljs[class~="roboconf"i]:before {
+  content: "Roboconf";
+}
+.message-group .hljs[class~="graph"i]:before {
+  content: "Roboconf";
+}
+.message-group .hljs[class~="instances"i]:before {
+  content: "Roboconf";
+}
+.message-group .hljs[class~="rss"i]:before {
+  content: "RSS Feed (XML)";
+}
+.message-group .hljs[class~="ruby"i]:before {
+  content: "Ruby";
+}
+.message-group .hljs[class~="rb"i]:before {
+  content: "Ruby";
+}
+.message-group .hljs[class~="thor"i]:before {
+  content: "Thor";
+}
+.message-group .hljs[class~="irb"i]:before {
+  content: "IRB";
+}
+.message-group .hljs[class~="gemspec"i]:before {
+  content: "Ruby Gem";
+}
+.message-group .hljs[class~="rust"i]:before {
+  content: "Rust";
+}
+.message-group .hljs[class~="rs"i]:before {
+  content: "Rust";
+}
+.message-group .hljs[class~="scala"i]:before {
+  content: "Scala";
+}
+.message-group .hljs[class~="scheme"i]:before {
+  content: "Scheme";
+}
+.message-group .hljs[class~="scilab"i]:before {
+  content: "Scilab";
+}
+.message-group .hljs[class~="sci"i]:before {
+  content: "Scilab";
+}
+.message-group .hljs[class~="scss"i]:before {
+  content: "SCSS";
+}
+.message-group .hljs[class~="shell"i]:before {
+  content: "Shell";
+}
+.message-group .hljs[class~="console"i]:before {
+  content: "Shell";
+}
+.message-group .hljs[class~="smali"i]:before {
+  content: "Smali";
+}
+.message-group .hljs[class~="smalltalk"i]:before {
+  content: "Smalltalk";
+}
+.message-group .hljs[class~="st"i]:before {
+  content: "Smalltalk";
+}
+.message-group .hljs[class~="sml"i]:before {
+  content: "SML";
+}
+.message-group .hljs[class~="sqf"i]:before {
+  content: "SQF";
+}
+.message-group .hljs[class~="sql"i]:before {
+  content: "SQL";
+}
+.message-group .hljs[class~="stan"i]:before {
+  content: "Stan";
+}
+.message-group .hljs[class~="stata"i]:before {
+  content: "Stata";
+}
+.message-group .hljs[class~="step21"i]:before {
+  content: "STEP Part 21";
+}
+.message-group .hljs[class~="step"i]:before {
+  content: "STEP Part 21";
+}
+.message-group .hljs[class~="stp"i]:before {
+  content: "STEP Part 21";
+}
+.message-group .hljs[class~="p21"i]:before {
+  content: "STEP Part 21";
+}
+.message-group .hljs[class~="stylus"i]:before {
+  content: "Stylus";
+}
+.message-group .hljs[class~="styl"i]:before {
+  content: "Stylus";
+}
+.message-group .hljs[class~="subunit"i]:before {
+  content: "SubUnit";
+}
+.message-group .hljs[class~="swift"i]:before {
+  content: "Swift";
+}
+.message-group .hljs[class~="taggerscript"i]:before {
+  content: "Tagger Script";
+}
+.message-group .hljs[class~="tap"i]:before {
+  content: "TAP";
+}
+.message-group .hljs[class~="tcl"i]:before {
+  content: "Tcl";
+}
+.message-group .hljs[class~="tk"i]:before {
+  content: "Tcl";
+}
+.message-group .hljs[class~="tex"i]:before {
+  content: "TeX";
+}
+.message-group .hljs[class~="thrift"i]:before {
+  content: "Thrift";
+}
+.message-group .hljs[class~="tp"i]:before {
+  content: "TP";
+}
+.message-group .hljs[class~="twig"i]:before {
+  content: "Twig";
+}
+.message-group .hljs[class~="craftcms"i]:before {
+  content: "Twig";
+}
+.message-group .hljs[class~="typescript"i]:before {
+  content: "TypeScript";
+}
+.message-group .hljs[class~="ts"i]:before {
+  content: "TypeScript";
+}
+.message-group .hljs[class~="vala"i]:before {
+  content: "Vala";
+}
+.message-group .hljs[class~="vbnet"i]:before {
+  content: "VB.NET";
+}
+.message-group .hljs[class~="vb"i]:before {
+  content: "VB.NET";
+}
+.message-group .hljs[class~="vbscript"i]:before {
+  content: "VBScript";
+}
+.message-group .hljs[class~="vbs"i]:before {
+  content: "VBScript";
+}
+.message-group .hljs[class~="verilog"i]:before {
+  content: "Verilog";
+}
+.message-group .hljs[class~="v"i]:before {
+  content: "Verilog";
+}
+.message-group .hljs[class~="vhdl"i]:before {
+  content: "VHDL";
+}
+.message-group .hljs[class~="vim"i]:before {
+  content: "Vim Script";
+}
+.message-group .hljs[class~="x86asm"i]:before {
+  content: "x86 Assembly";
+}
+.message-group .hljs[class~="xl"i]:before {
+  content: "XL";
+}
+.message-group .hljs[class~="tao"i]:before {
+  content: "XL";
+}
+.message-group .hljs[class~="xquery"i]:before {
+  content: "XQuery";
+}
+.message-group .hljs[class~="xq xpath"i]:before {
+  content: "XQuery";
+}
+.message-group .hljs[class~="yaml"i]:before {
+  content: "YAML";
+}
+.message-group .hljs[class~="yml"i]:before {
+  content: "YAML";
+}
+.message-group .hljs[class~="xhtml"i]:before {
+  content: "XHTML";
+}
+.message-group .hljs[class~="xml"i]:before {
+  content: "XML";
+}
+.message-group .hljs[class~="xsd"i]:before {
+  content: "XML Schema";
+}
+.message-group .hljs[class~="xsl"i]:before {
+  content: "XSL";
+}
+.message-group .hljs[class~="zephir"i]:before {
+  content: "Zephir";
+}
+.message-group .hljs[class~="zep"i]:before {
+  content: "Zephir";
+}
+.unread-mentions-indicator-bottom div[class*="mention-"] {
+  background-color: #f04747;
+}
+.unread-mentions-indicator-bottom div[class*="bar-"] {
+  border-radius: 0;
+}
+.badge {
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
 }

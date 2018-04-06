@@ -4,88 +4,121 @@ flatie
 	github.com/katabame/flatie
 */
 
-// Support Twemoji plugin https://gist.github.com/allanf181/5f49b7e5732009b6225624e99045a4ba
-img.emoji
-	height: 1em
-	width: 1em
-	margin: 0 .05em 0 .1em
-	vertical-align: -0.1em
-	min-height: 0
-	min-width: 0
+// vars
+$green = #43b581
+$orage = #faa61a
+$red = #f04747
+$gray = #747f8d
 
-/* Squared Indicator */
-.unread-mentions-indicator-bottom
-	div[class*="mention-"]
-		background-color: #f04747
-	div[class*="bar-"]
+$white = #f5f5f5
+$black = #202020
+
+////-- Grobal area ////
+// Support Japanese font
+@import url("https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css")
+@import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css")
+body
+	font-family: Whitney, "Helvetica Nene", Helvetica, Arial, sans-serif, "Rounded M+ 1c", "Noto Sans Japanese"
+
+div[class*="avatar-small"], div[class*="avatar-large"], div[class*="avatarDefault-"], div[class*="avatarSpeaking-"], div[class*="avatar-"] > div[class*="image-"]
+	border-radius: 5px
+div[class*="mask-"], div[class*="maskProfile-"]
+	mask: none
+div[class*="avatarHint-"]
+	border-radius: 5px
+
+div[class*="base-"], li[class*="role-"], div[class*="notice-"], button[class*="button-"], .search .search-bar, .search-popout, .option .search-option:hover
+	border-radius: 0
+
+.popout
+	& > div[class*="userPopout-"]
 		border-radius: 0
-
-.badge
-	text-shadow: none
-	box-shadow: none
+		& > div[class*="footer-"]
+			display: none
+	& > div[class*="menu-"]
+		background-color: $black
+		border-radius: 0
+		& > div[class*="separator-"]
+			border-color: #404040
+	& > div[class*="attachPopout-"]
+		background-color: $black
+		border-radius: 0
+		& > div[class*="attachPopoutRow-"]:hover
+			background-color: #303030
+			border-radius: 0
+	& > div[class*="container-"]
+		& > header, & > section
+			border-radius: 0
+div[class*="inner-"] > div[class*="modal-"]
+	background-color: $black
 	border-radius: 0
 
-.bot-tag, span[class*="botTag-"], .renamer-tag // Support renamer plugin https://github.com/megamit/repository/tree/gh-pages/renamer
+span[class*="botTag-"]
 	border-radius: 0 !important
 
-/* Radial Status */
-.channel-members
-	.member
-		.status
-			width: 100% !important
-			background: transparent
-			border-radius: inherit
-			height: 100%
-			right: -4px !important
-			bottom: -4px
-			padding: 2px
-			border-width: 2px
-			margin: 0
-			&.status-online
-				border-color: #43b581 !important
-			&.status-idle
-				border-color: #faa61a !important
-			&.status-dnd
-				border-color: #f04747 !important
-			&.status-offline
-				border-color: #636b75 !important
-			&.status-typing
-				background-color: rgba(0, 0, 0, 0.8) !important
-				.spinner
-					.spinner-inner
-						left: 1px !important
-						top: 1px !important
-		.status-streaming.status
-				border-color: #593695 !important
+// Search area
+.search-popout
+	background-color: #303030
+	& .search-query
+		color: #e0e0e0
+		& .search-for strong
+			color: #a0a0a0
+		&.selected
+			color: #424242
+			& .search-for strong
+				color: #606060
+	.option
+		&:after
+			background: none
+		&.selected
+			border-radius: 0
+			background-color: #f5f5f5
+			&:after
+				background: none
+			& > .filter, & strong, &.user .display-username
+				color: #424242
+			& > .answer, & > .non-text, &.user .displayed-nick
+				color: #606060
+		& > .filter, & strong, &.user .display-username
+			color: #e0e0e0
+		& > .answer, & > .non-text, &.user .displayed-nick
+			color: #a0a0a0
 
-/* UserPopup */
-div[class*="userPopout-"],
-div[class*=".assetsLargeImage-"] // discord integration
+// Friends area
+#friends .tab-bar .tab-bar-item, form[class*="wrapper-"], #friends .btn, .private-channels .channel a, .private-channels .channel a:hover
+	border-radius: 0
+.private-channels header
+	background-color: transparent
+.private-channels .search-bar, div[class*="headerBar-"]
+	background-color: $black !important
+
+#friends, .friends-table
+	background-color: #404040 !important
+//// Grobal area--////
+
+////-- Guild area ////
+.guilds-wrapper
+	background-color: $black
+
+.guilds-wrapper .guilds .guild .guild-inner, .guilds-wrapper .guild-error, .guilds-wrapper .guilds-add
+	border-radius: 5px !important
+//// Guild area --////
+
+
+////-- Channel area ////
+div[class*="channels-"]
+	& > *
+		background-color: #303030
+	& > :nth-last-child(1), & > :nth-last-child(2)
+		background-color: $black
+		border: none
+header
+	background-color: $black
+
+div[class*="content-"], div[class*="bar-"]
 	border-radius: 0
 
-// Header
-div[class*="headerNormal-"] // header color
-	background: #212121
-
-div[class*="avatarNormal-"] // avatar border
-	border-color: #f5f5f5
-
-div[class*="avatarStatus"] // clear status border
-	border-color: transparent !important
-
-// Body
-.member-role-add, .member-role-remove, // clear Role button
-.footer-2J5zqP//div[class*="footer-"] // clear User-popup footer
-	display: none !important
-
-.member-role // beauful Role
-	border: none !important
-	border-radius: 0 !important
-	background: currentColor !important
-	.name
-		color: white !important
-
-/* Speaking Indicator */
+// Speaking Indicator
 div[class*="avatarSpeaking-"]
 	border-color: transparent !important
 	box-shadow: none !important
@@ -96,4 +129,59 @@ div[class*="avatarSpeaking-"]
 		left: -5px
 		width: 4px
 		height: 20px
-		background: #43b581
+		background: $green
+//// Channel area --////
+
+
+//// -- Chat area
+.chat
+	& > div[class*="titleWrapper-"] > div
+		background-color: $black
+	& > .content, .messages-wrapper, form, div[class*="typing-"], .divider span
+		background-color: #404040 !important
+	div[class*="membersWrap-"] div[class*="members-"]
+		background-color: #303030
+	& .new-messages-bar, & .jump-to-present-bar
+		border-radius: 0
+div[class*="message"]
+	& > .accessory > div[class*="embed-"] > div[class*="embedPill-"],
+	& > .accessory > div[class*="embed-"] > div[class*="embedInner-"]
+		border-radius: 0
+div[class*="innerNoAutocomplete-"]
+	border-radius: 0
+.message-group .comment .markup
+	& pre, & code.inline
+		border-radius: 0
+//// Chat area --////
+
+////-- Modals ////
+.create-guild-container.deprecated .create-or-join .form-inner
+	background-color: #ffffff
+	border-radius: 0
+	& > header
+		background-color: transparent
+	& .action
+		border-radius: 0
+		& .btn
+			border-radius: 0
+
+div[class*="root-"], div[class*="connectedAccount-"]
+	border-radius: 0
+
+//// Modals --////
+
+////-- Tweaks ////
+@import codelang
+
+// Squared Indicator
+.unread-mentions-indicator-bottom
+	div[class*="mention-"]
+		background-color: $red
+	div[class*="bar-"]
+		border-radius: 0
+
+.badge
+	text-shadow: none
+	box-shadow: none
+	border-radius: 0
+//// Tweaks --////
