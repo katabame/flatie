@@ -5,6 +5,7 @@ flatie
 */
 
 // vars
+$version = "v0.1.1"
 $green = #43b581
 $orage = #faa61a
 $red = #f04747
@@ -20,6 +21,28 @@ $black = #202020
 body
 	font-family: Whitney, "Helvetica Nene", Helvetica, Arial, sans-serif, "Rounded M+ 1c", "Noto Sans Japanese"
 
+div[class*="scroller-"]::-webkit-scrollbar-thumb, .scroller-wrap ::-webkit-scrollbar-thumb
+	background-color: rgba($gray, .5) !important
+.scroller-wrap ::-webkit-scrollbar-thumb
+	border-color: #404040 !important
+
+.scroller-wrap
+	& ::-webkit-scrollbar-track-piece
+		background-color: #404040 !important
+		border-color: #404040 !important
+
+	& .scroller::-webkit-scrollbar
+		width: 10px
+
+.tooltip
+	border-radius: 0
+
+div[class*="contextMenu-"], div[class*="item-"]
+	border-radius: 0
+	background-color: $black !important
+div[class*="item-"]:hover
+	background-color: #424242 !important
+
 div[class*="avatar-small"], div[class*="avatar-large"], div[class*="avatarDefault-"], div[class*="avatarSpeaking-"], div[class*="avatar-"] > div[class*="image-"]
 	border-radius: 5px
 div[class*="mask-"], div[class*="maskProfile-"]
@@ -27,8 +50,82 @@ div[class*="mask-"], div[class*="maskProfile-"]
 div[class*="avatarHint-"]
 	border-radius: 5px
 
-div[class*="base-"], li[class*="role-"], div[class*="notice-"], button[class*="button-"], .search .search-bar, .search-popout, .option .search-option:hover
+div[class*="base-"], li[class*="role-"], div[class*="notice-"], button[class*="button-"], .search .search-bar, .search-popout, .option .search-option:hover,
+div[class*="overflowRolesPopout-"], .guild-settings-members-filter-popout, div[class*="invite-"]
 	border-radius: 0
+
+.themed-popout
+	border-radius: 0 !important
+	border: none !important
+	.header
+		border-radius: 0 !important
+		background-color: $black !important
+	.message-group
+		border-radius: 0
+		background-color: #303030 !important
+		&:hover .action-buttons
+			background-color: #303030 !important
+			box-shadow: none !important
+			.jump-button
+				border-radius: 0
+				background-color: #404040 !important
+	.scroller-wrap
+		background-color: #303030
+		.scroller
+			&::-webkit-scrollbar
+				width: 6px
+			&::-webkit-scrollbar-thumb
+				background-color: #404040 !important
+			&::-webkit-scrollbar-track-piece
+				background-color: #303030 !important
+				border-color: #303030 !important
+
+.recent-mentions-popout
+	border-radius: 0 !important
+	background-color: $black !important
+	.header
+		border-radius: 0 !important
+		background-color: $black !important
+	.message-group
+		border-radius: 0
+		background-color: #303030 !important
+		&:hover .action-buttons
+			background-color: #303030 !important
+			box-shadow: none !important
+			.jump-button
+				border-radius: 0
+				background-color: #404040 !important
+	.has-more button
+		border-radius: 0
+		background-color: #303030 !important
+
+	.scroller
+		&::-webkit-scrollbar
+			width: 10px !important
+		&::-webkit-scrollbar-thumb
+			background-color: #303030 !important
+			border-color: #303030 !important
+		&::-webkit-scrollbar-track-piece
+			background-color: $black !important
+			border-color: $black !important
+
+.guild-settings-members-filter-popout
+	background-color: #303030 !important
+	div[class*="searchBar-"]
+		border-radius: 0
+		background-color: $black
+	div[class*="scroller-"]
+		&::-webkit-scrollbar-thumb
+			background-color: #404040 !important
+		&::-webkit-scrollbar-track
+			background-color: #303030 !important
+	div[class*="selected-"]
+		background-color: $black !important
+		border-radius: 0
+.custom-header
+	div[class*="searchBar-"]
+		border-radius: 0
+		background-color: #303030
 
 .popout
 	& > div[class*="userPopout-"]
@@ -84,6 +181,10 @@ span[class*="botTag-"]
 		& > .answer, & > .non-text, &.user .displayed-nick
 			color: #a0a0a0
 
+div[class*="selectableItem-"]:hover
+	background-color: #424242 !important
+	border-radius: 0
+
 // Friends area
 #friends .tab-bar .tab-bar-item, form[class*="wrapper-"], #friends .btn, .private-channels .channel a, .private-channels .channel a:hover
 	border-radius: 0
@@ -94,6 +195,9 @@ span[class*="botTag-"]
 
 #friends, .friends-table
 	background-color: #404040 !important
+
+div[class*="barInner-"]
+	border-radius: 0
 //// Grobal area--////
 
 ////-- Guild area ////
@@ -107,11 +211,13 @@ span[class*="botTag-"]
 
 ////-- Channel area ////
 div[class*="channels-"]
-	& > *
-		background-color: #303030
+	& > :first-child
+		background-color: #303030 !important
 	& > :nth-last-child(1), & > :nth-last-child(2)
 		background-color: $black
 		border: none
+	& > :nth-last-child(1)
+		margin-bottom: 0
 header
 	background-color: $black
 
@@ -130,6 +236,8 @@ div[class*="avatarSpeaking-"]
 		width: 4px
 		height: 20px
 		background: $green
+
+
 //// Channel area --////
 
 
@@ -143,15 +251,77 @@ div[class*="avatarSpeaking-"]
 		background-color: #303030
 	& .new-messages-bar, & .jump-to-present-bar
 		border-radius: 0
+	div[class*="member-"]:hover
+		border-radius: 0
+
 div[class*="message"]
 	& > .accessory > div[class*="embed-"] > div[class*="embedPill-"],
 	& > .accessory > div[class*="embed-"] > div[class*="embedInner-"]
 		border-radius: 0
-div[class*="innerNoAutocomplete-"]
+
+div[class*="innerNoAutocomplete-"], div[class*="innerAutocomplete-"]
 	border-radius: 0
-.message-group .comment .markup
-	& pre, & code.inline
+.message-group
+	& .mentioned .message-text:after
 		border-radius: 0
+	& .comment .markup
+		& pre, & code.inline
+			border-radius: 0
+
+div[class*="autocomplete-"], div[class*="selector-"]
+	border-radius: 0
+	background-color: $black !important
+
+div[class*="selectorSelected-"]
+	background-color: #424242 !important
+
+div[class*="emojiPicker-"]
+	border-radius: 0
+	border: none
+	background-color: $black !important
+	div[class*="header-"] .search-bar, div[class*="category-"]
+		background-color: $black !important
+	.search-bar.search-bar-light .search-bar-inner
+		border-radius: 0 !important
+		background-color: #424242
+
+// BetterDiscord Support
+#bda-qem, #bda-qem > *
+	border-radius: 0 !important
+#bda-qem button
+	background-color: #424242 !important
+	&.active
+		background-color: $black !important
+
+// Search result
+.search-results-wrap
+	.search-header
+		background-color: $black !important
+	div[class*="scroller-"]
+		background-color: #303030
+		&::-webkit-scrollbar
+			width: 10px !important
+		&::-webkit-scrollbar-thumb
+			background-color: #404040 !important
+		&::-webkit-scrollbar-track
+			background-color: #303030 !important
+	.pagination
+		.pagination-previous, .pagination-next
+			border-radius: 0 !important
+	.search-results
+		.search-result
+			&:before, &:after
+				background-image: none
+			.hit
+				background-color: #404040
+				border-radius: 0
+				box-shadow: 0 0 10px 6px #303030
+		.jump-button
+			border-radius: 0
+			//background-color: #303030 !important
+		.channel-name
+			background-color: #303030 !important
+
 //// Chat area --////
 
 ////-- Modals ////
@@ -165,10 +335,125 @@ div[class*="innerNoAutocomplete-"]
 		& .btn
 			border-radius: 0
 
-div[class*="root-"], div[class*="connectedAccount-"]
+div[class*="root-"], div[class*="connectedAccount-"], div[class*="footer-"], div[class*="video-"], div[class*="imageWrapper-"]
 	border-radius: 0
+div[class*="regionSelectFlag-"]
+	border-radius: 5px
+
+div[class*="regionSelectModal-"], div[class*="regionSelectModalOption-"]
+	background-color: $black !important
+	border-radius: 0 !important
+	border-color: $gray !important
+div[class*="regionSelectName-"]
+	color: $white
+
+div[class*="uploadModal-"]
+	border-radius: 0
+	background-color: #303030
+	div[class*="inner-"]
+		border: none
+		div[class*="image-"]
+			border-radius: 0 !important
+			border: none !important
+		div[class*="inner-"]
+			background-color: $black
+	div[class*="footer-"]
+		background-color: #303030
+		& > :first-child
+			background-color: #303030
+
+.need-help-modal
+	.header
+		border-radius: 0 !important
+		input[type="text"]
+			border-radius: 0 !important
+			background-color: #303030 !important
+			border-bottom: none !important
+			color: $white !important
+	.form-inner
+		background-color: $black !important
+	.footer
+		border-radius: 0 !important
+		background-color: $black !important
+		border-top: none !important
 
 //// Modals --////
+
+////-- Settings panel ////
+.sidebar-region
+	background-color: #303030 !important
+.content-region
+	background-color: $black !important
+div[class*="cardPrimary-"]
+	background-color: #303030 !important
+	border-radius: 0
+.sidebar
+	div[class*="item-"]
+		border-radius: 0
+		background-color: #303030 !important
+		&:hover
+			background-color: $black !important
+div[class*="side-"] div[class*="itemSelected-"]
+	background-color: $black !important
+.btn-close, div[class*="connection-"], div[class*="connectionDelete-"], button[class*="accountBtnInner-"],
+.Select .Select-control, div[class*="grabber-"], .media-engine-video, div[class*="previewOverlay-"], div[class*="container-"],
+div[class*="checkbox-"], div[class*="ghostPill-"], .user-settings-games .now-playing, .user-settings-games .game-name-input, .add-game-popout,
+div[class*="card-"]:hover:before, .remove-game, span[class*="questionMark-"], input[class*="input-"], .avatar-uploader-inner, .avatar-uploader-indicator,
+.emoji-remove, div[class*="copyInput-"], button[class*="addButton-"], button[class*="overflowButton-"], .revoke-invite
+	border-radius: 0 !important
+span[class*="button-"]
+	padding: 0
+	border-radius: 0
+	/*
+	right: 0
+	margin: 0
+	margin-left: -30px
+	min-height: 100%
+	top: 15%
+	*/
+div[class*="card-"]:hover:before, .remove-game, .emoji-remove, .revoke-invite
+	background-color: #303030 !important
+img[class*="appAvatar"]
+	border-radius: 0
+
+button[class*="button-"]
+	margin: 0
+
+div[class*="flag-"]
+	border-radius: 5px
+
+.Select .Select-control div
+	padding-top: 1px
+
+div[class*="auditLog-"], div[class*="headerExpanded-"]
+	background-color: #303030 !important
+	border-radius: 0
+
+
+// BetterDiscord Support
+#bd-settings-sidebar .ui-tab-bar-item
+	border-radius: 0
+	&:hover
+		background-color: $black
+	&.selected
+		background-color: $black
+.bd-pfbtn
+	border-radius: 0 !important
+
+.sidebar > div[class*="side"]:after
+	content: "flatie " + $version + "\A by @katabame#3778"
+	display: block
+	background-color: $green
+	margin: 0 .5rem
+	margin-top: 1rem
+	padding: 1rem 1rem 0
+	color: #f5f5f5
+	height: 3rem
+	white-space: pre
+
+//button[type="button"]
+//	background-color: $black !important
+//// Settings panel--////
 
 ////-- Tweaks ////
 @import codelang
