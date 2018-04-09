@@ -31,7 +31,7 @@ div[class*="item-"] {
   background-color: #202020 !important;
 }
 div[class*="item-"]:hover {
-  background-color: #424242 !important;
+  background-color: #404040 !important;
 }
 div[class*="avatar-small"],
 div[class*="avatar-large"],
@@ -59,6 +59,13 @@ div[class*="overflowRolesPopout-"],
 .guild-settings-members-filter-popout,
 div[class*="invite-"] {
   border-radius: 0;
+}
+.game-invite-embed div[class*="coverImageWrapper-"] {
+  border-radius: 0;
+}
+.game-invite-embed div[class*="coverImage-"] {
+  -webkit-mask: none;
+  mask: none;
 }
 .themed-popout {
   border-radius: 0 !important;
@@ -193,7 +200,7 @@ span[class*="botTag-"] {
   color: #a0a0a0;
 }
 .search-popout .search-query.selected {
-  color: #424242;
+  color: #404040;
 }
 .search-popout .search-query.selected .search-for strong {
   color: #606060;
@@ -211,7 +218,7 @@ span[class*="botTag-"] {
 .search-popout .option.selected > .filter,
 .search-popout .option.selected strong,
 .search-popout .option.selected.user .display-username {
-  color: #424242;
+  color: #404040;
 }
 .search-popout .option.selected > .answer,
 .search-popout .option.selected > .non-text,
@@ -229,7 +236,7 @@ span[class*="botTag-"] {
   color: #a0a0a0;
 }
 div[class*="selectableItem-"]:hover {
-  background-color: #424242 !important;
+  background-color: #404040 !important;
   border-radius: 0;
 }
 #friends .tab-bar .tab-bar-item,
@@ -256,6 +263,12 @@ div[class*="barInner-"] {
 .guilds-wrapper {
   background-color: #202020;
 }
+.guilds-wrapper .guild.audio .guild-inner:after {
+  border-radius: 5px !important;
+  background-color: #747f8d !important;
+  top: -5px;
+  right: -5px;
+}
 .guilds-wrapper .guilds .guild .guild-inner,
 .guilds-wrapper .guild-error,
 .guilds-wrapper .guilds-add {
@@ -265,12 +278,17 @@ div[class*="channels-"] > :first-child {
   background-color: #303030 !important;
 }
 div[class*="channels-"] > :nth-last-child(1),
-div[class*="channels-"] > :nth-last-child(2) {
+div[class*="channels-"] > :nth-last-child(2),
+div[class*="channels-"] div[class*="listeningAlong-"] {
   background-color: #202020;
   border: none;
-}
-div[class*="channels-"] > :nth-last-child(1) {
   margin-bottom: 0;
+}
+div[class*="channels-"] div[class*="listeningAlong-"] div[class*="avatarMasked-"] {
+  -webkit-mask-image: none;
+  mask-image: none;
+  margin: 0;
+  margin-right: 4px;
 }
 header {
   background-color: #202020;
@@ -313,6 +331,19 @@ div[class*="avatarSpeaking-"]::before {
 .chat div[class*="member-"]:hover {
   border-radius: 0;
 }
+.chat .divider > div {
+  height: 0;
+}
+.chat .divider > span:before {
+  content: "≪";
+  vertical-align: 1px;
+  margin-right: 1em;
+}
+.chat .divider > span:after {
+  content: "≫";
+  vertical-align: 1px;
+  margin-left: 1em;
+}
 div[class*="message"] > .accessory > div[class*="embed-"] > div[class*="embedPill-"],
 div[class*="message"] > .accessory > div[class*="embed-"] > div[class*="embedInner-"] {
   border-radius: 0;
@@ -334,7 +365,7 @@ div[class*="selector-"] {
   background-color: #202020 !important;
 }
 div[class*="selectorSelected-"] {
-  background-color: #424242 !important;
+  background-color: #404040 !important;
 }
 div[class*="emojiPicker-"] {
   border-radius: 0;
@@ -347,14 +378,14 @@ div[class*="emojiPicker-"] div[class*="category-"] {
 }
 div[class*="emojiPicker-"] .search-bar.search-bar-light .search-bar-inner {
   border-radius: 0 !important;
-  background-color: #424242;
+  background-color: #404040;
 }
 #bda-qem,
 #bda-qem > * {
   border-radius: 0 !important;
 }
 #bda-qem button {
-  background-color: #424242 !important;
+  background-color: #404040 !important;
 }
 #bda-qem button.active {
   background-color: #202020 !important;
@@ -557,13 +588,13 @@ div[class*="headerExpanded-"] {
   border-radius: 0 !important;
 }
 .sidebar > div[class*="side"]:after {
-  content: 'flatie v0.1.1\A by @katabame#3778';
+  content: 'flatie v0.1.2\A by @katabame#3778';
   display: block;
   background-color: #43b581;
   margin: 0 0.5rem;
   margin-top: 1rem;
   padding: 1rem 1rem 0;
-  color: #f5f5f5;
+  color: #fff;
   height: 3rem;
   white-space: pre;
 }

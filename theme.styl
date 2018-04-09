@@ -5,14 +5,17 @@ flatie
 */
 
 // vars
-$version = "v0.1.1"
+$version = "v0.1.2"
 $green = #43b581
 $orage = #faa61a
 $red = #f04747
 $gray = #747f8d
 
 $white = #f5f5f5
-$black = #202020
+
+$ashen = #404040
+$black = #303030
+$dark = #202020
 
 ////-- Grobal area ////
 // Support Japanese font
@@ -24,12 +27,12 @@ body
 div[class*="scroller-"]::-webkit-scrollbar-thumb, .scroller-wrap ::-webkit-scrollbar-thumb
 	background-color: rgba($gray, .5) !important
 .scroller-wrap ::-webkit-scrollbar-thumb
-	border-color: #404040 !important
+	border-color: $ashen !important
 
 .scroller-wrap
 	& ::-webkit-scrollbar-track-piece
-		background-color: #404040 !important
-		border-color: #404040 !important
+		background-color: $ashen !important
+		border-color: $ashen !important
 
 	& .scroller::-webkit-scrollbar
 		width: 10px
@@ -39,9 +42,9 @@ div[class*="scroller-"]::-webkit-scrollbar-thumb, .scroller-wrap ::-webkit-scrol
 
 div[class*="contextMenu-"], div[class*="item-"]
 	border-radius: 0
-	background-color: $black !important
+	background-color: $dark !important
 div[class*="item-"]:hover
-	background-color: #424242 !important
+	background-color: $ashen !important
 
 div[class*="avatar-small"], div[class*="avatar-large"], div[class*="avatarDefault-"], div[class*="avatarSpeaking-"], div[class*="avatar-"] > div[class*="image-"]
 	border-radius: 5px
@@ -54,78 +57,84 @@ div[class*="base-"], li[class*="role-"], div[class*="notice-"], button[class*="b
 div[class*="overflowRolesPopout-"], .guild-settings-members-filter-popout, div[class*="invite-"]
 	border-radius: 0
 
+.game-invite-embed
+	div[class*="coverImageWrapper-"]
+		border-radius: 0
+	div[class*="coverImage-"]
+		mask: none
+
 .themed-popout
 	border-radius: 0 !important
 	border: none !important
 	.header
 		border-radius: 0 !important
-		background-color: $black !important
+		background-color: $dark !important
 	.message-group
 		border-radius: 0
-		background-color: #303030 !important
+		background-color: $black !important
 		&:hover .action-buttons
-			background-color: #303030 !important
+			background-color: $black !important
 			box-shadow: none !important
 			.jump-button
 				border-radius: 0
-				background-color: #404040 !important
+				background-color: $ashen !important
 	.scroller-wrap
-		background-color: #303030
+		background-color: $black
 		.scroller
 			&::-webkit-scrollbar
 				width: 6px
 			&::-webkit-scrollbar-thumb
-				background-color: #404040 !important
+				background-color: $ashen !important
 			&::-webkit-scrollbar-track-piece
-				background-color: #303030 !important
-				border-color: #303030 !important
+				background-color: $black !important
+				border-color: $black !important
 
 .recent-mentions-popout
 	border-radius: 0 !important
-	background-color: $black !important
+	background-color: $dark !important
 	.header
 		border-radius: 0 !important
-		background-color: $black !important
+		background-color: $dark !important
 	.message-group
 		border-radius: 0
-		background-color: #303030 !important
+		background-color: $black !important
 		&:hover .action-buttons
-			background-color: #303030 !important
+			background-color: $black !important
 			box-shadow: none !important
 			.jump-button
 				border-radius: 0
-				background-color: #404040 !important
+				background-color: $ashen !important
 	.has-more button
 		border-radius: 0
-		background-color: #303030 !important
+		background-color: $black !important
 
 	.scroller
 		&::-webkit-scrollbar
 			width: 10px !important
 		&::-webkit-scrollbar-thumb
-			background-color: #303030 !important
-			border-color: #303030 !important
-		&::-webkit-scrollbar-track-piece
 			background-color: $black !important
 			border-color: $black !important
+		&::-webkit-scrollbar-track-piece
+			background-color: $dark !important
+			border-color: $dark !important
 
 .guild-settings-members-filter-popout
-	background-color: #303030 !important
+	background-color: $black !important
 	div[class*="searchBar-"]
 		border-radius: 0
-		background-color: $black
+		background-color: $dark
 	div[class*="scroller-"]
 		&::-webkit-scrollbar-thumb
-			background-color: #404040 !important
+			background-color: $ashen !important
 		&::-webkit-scrollbar-track
-			background-color: #303030 !important
+			background-color: $black !important
 	div[class*="selected-"]
-		background-color: $black !important
+		background-color: $dark !important
 		border-radius: 0
 .custom-header
 	div[class*="searchBar-"]
 		border-radius: 0
-		background-color: #303030
+		background-color: $black
 
 .popout
 	& > div[class*="userPopout-"]
@@ -133,21 +142,21 @@ div[class*="overflowRolesPopout-"], .guild-settings-members-filter-popout, div[c
 		& > div[class*="footer-"]
 			display: none
 	& > div[class*="menu-"]
-		background-color: $black
+		background-color: $dark
 		border-radius: 0
 		& > div[class*="separator-"]
-			border-color: #404040
+			border-color: $ashen
 	& > div[class*="attachPopout-"]
-		background-color: $black
+		background-color: $dark
 		border-radius: 0
 		& > div[class*="attachPopoutRow-"]:hover
-			background-color: #303030
+			background-color: $black
 			border-radius: 0
 	& > div[class*="container-"]
 		& > header, & > section
 			border-radius: 0
 div[class*="inner-"] > div[class*="modal-"]
-	background-color: $black
+	background-color: $dark
 	border-radius: 0
 
 span[class*="botTag-"]
@@ -155,13 +164,13 @@ span[class*="botTag-"]
 
 // Search area
 .search-popout
-	background-color: #303030
+	background-color: $black
 	& .search-query
 		color: #e0e0e0
 		& .search-for strong
 			color: #a0a0a0
 		&.selected
-			color: #424242
+			color: $ashen
 			& .search-for strong
 				color: #606060
 	.option
@@ -169,11 +178,11 @@ span[class*="botTag-"]
 			background: none
 		&.selected
 			border-radius: 0
-			background-color: #f5f5f5
+			background-color: $white
 			&:after
 				background: none
 			& > .filter, & strong, &.user .display-username
-				color: #424242
+				color: $ashen
 			& > .answer, & > .non-text, &.user .displayed-nick
 				color: #606060
 		& > .filter, & strong, &.user .display-username
@@ -182,7 +191,7 @@ span[class*="botTag-"]
 			color: #a0a0a0
 
 div[class*="selectableItem-"]:hover
-	background-color: #424242 !important
+	background-color: $ashen !important
 	border-radius: 0
 
 // Friends area
@@ -191,10 +200,10 @@ div[class*="selectableItem-"]:hover
 .private-channels header
 	background-color: transparent
 .private-channels .search-bar, div[class*="headerBar-"]
-	background-color: $black !important
+	background-color: $dark !important
 
 #friends, .friends-table
-	background-color: #404040 !important
+	background-color: $ashen !important
 
 div[class*="barInner-"]
 	border-radius: 0
@@ -202,7 +211,14 @@ div[class*="barInner-"]
 
 ////-- Guild area ////
 .guilds-wrapper
-	background-color: $black
+	background-color: $dark
+	.guild
+		&.audio
+			.guild-inner:after
+				border-radius: 5px !important
+				background-color: $gray !important
+				top: -5px
+				right: @top
 
 .guilds-wrapper .guilds .guild .guild-inner, .guilds-wrapper .guild-error, .guilds-wrapper .guilds-add
 	border-radius: 5px !important
@@ -212,14 +228,19 @@ div[class*="barInner-"]
 ////-- Channel area ////
 div[class*="channels-"]
 	& > :first-child
-		background-color: #303030 !important
-	& > :nth-last-child(1), & > :nth-last-child(2)
-		background-color: $black
+		background-color: $black !important
+	& > :nth-last-child(1), & > :nth-last-child(2), div[class*="listeningAlong-"]
+		background-color: $dark
 		border: none
-	& > :nth-last-child(1)
 		margin-bottom: 0
+	div[class*="listeningAlong-"] div[class*="avatarMasked-"]
+		mask-image: none
+		margin: 0
+		margin-right: 4px
+
+
 header
-	background-color: $black
+	background-color: $dark
 
 div[class*="content-"], div[class*="bar-"]
 	border-radius: 0
@@ -244,15 +265,27 @@ div[class*="avatarSpeaking-"]
 //// -- Chat area
 .chat
 	& > div[class*="titleWrapper-"] > div
-		background-color: $black
+		background-color: $dark
 	& > .content, .messages-wrapper, form, div[class*="typing-"], .divider span
-		background-color: #404040 !important
+		background-color: $ashen !important
 	div[class*="membersWrap-"] div[class*="members-"]
-		background-color: #303030
+		background-color: $black
 	& .new-messages-bar, & .jump-to-present-bar
 		border-radius: 0
 	div[class*="member-"]:hover
 		border-radius: 0
+	.divider
+		& > div
+			height: 0
+		& > span
+			&:before
+				content: "≪"
+				vertical-align: 1px
+				margin-right: 1em
+			&:after
+				content: "≫"
+				vertical-align: 1px
+				margin-left: 1em
 
 div[class*="message"]
 	& > .accessory > div[class*="embed-"] > div[class*="embedPill-"],
@@ -270,41 +303,41 @@ div[class*="innerNoAutocomplete-"], div[class*="innerAutocomplete-"]
 
 div[class*="autocomplete-"], div[class*="selector-"]
 	border-radius: 0
-	background-color: $black !important
+	background-color: $dark !important
 
 div[class*="selectorSelected-"]
-	background-color: #424242 !important
+	background-color: $ashen !important
 
 div[class*="emojiPicker-"]
 	border-radius: 0
 	border: none
-	background-color: $black !important
+	background-color: $dark !important
 	div[class*="header-"] .search-bar, div[class*="category-"]
-		background-color: $black !important
+		background-color: $dark !important
 	.search-bar.search-bar-light .search-bar-inner
 		border-radius: 0 !important
-		background-color: #424242
+		background-color: $ashen
 
 // BetterDiscord Support
 #bda-qem, #bda-qem > *
 	border-radius: 0 !important
 #bda-qem button
-	background-color: #424242 !important
+	background-color: $ashen !important
 	&.active
-		background-color: $black !important
+		background-color: $dark !important
 
 // Search result
 .search-results-wrap
 	.search-header
-		background-color: $black !important
+		background-color: $dark !important
 	div[class*="scroller-"]
-		background-color: #303030
+		background-color: $black
 		&::-webkit-scrollbar
 			width: 10px !important
 		&::-webkit-scrollbar-thumb
-			background-color: #404040 !important
+			background-color: $ashen !important
 		&::-webkit-scrollbar-track
-			background-color: #303030 !important
+			background-color: $black !important
 	.pagination
 		.pagination-previous, .pagination-next
 			border-radius: 0 !important
@@ -313,20 +346,20 @@ div[class*="emojiPicker-"]
 			&:before, &:after
 				background-image: none
 			.hit
-				background-color: #404040
+				background-color: $ashen
 				border-radius: 0
-				box-shadow: 0 0 10px 6px #303030
+				box-shadow: 0 0 10px 6px $black
 		.jump-button
 			border-radius: 0
-			//background-color: #303030 !important
+			//background-color: $black !important
 		.channel-name
-			background-color: #303030 !important
+			background-color: $black !important
 
 //// Chat area --////
 
 ////-- Modals ////
 .create-guild-container.deprecated .create-or-join .form-inner
-	background-color: #ffffff
+	background-color: white
 	border-radius: 0
 	& > header
 		background-color: transparent
@@ -341,7 +374,7 @@ div[class*="regionSelectFlag-"]
 	border-radius: 5px
 
 div[class*="regionSelectModal-"], div[class*="regionSelectModalOption-"]
-	background-color: $black !important
+	background-color: $dark !important
 	border-radius: 0 !important
 	border-color: $gray !important
 div[class*="regionSelectName-"]
@@ -349,52 +382,52 @@ div[class*="regionSelectName-"]
 
 div[class*="uploadModal-"]
 	border-radius: 0
-	background-color: #303030
+	background-color: $black
 	div[class*="inner-"]
 		border: none
 		div[class*="image-"]
 			border-radius: 0 !important
 			border: none !important
 		div[class*="inner-"]
-			background-color: $black
+			background-color: $dark
 	div[class*="footer-"]
-		background-color: #303030
+		background-color: $black
 		& > :first-child
-			background-color: #303030
+			background-color: $black
 
 .need-help-modal
 	.header
 		border-radius: 0 !important
 		input[type="text"]
 			border-radius: 0 !important
-			background-color: #303030 !important
+			background-color: $black !important
 			border-bottom: none !important
 			color: $white !important
 	.form-inner
-		background-color: $black !important
+		background-color: $dark !important
 	.footer
 		border-radius: 0 !important
-		background-color: $black !important
+		background-color: $dark !important
 		border-top: none !important
 
 //// Modals --////
 
 ////-- Settings panel ////
 .sidebar-region
-	background-color: #303030 !important
-.content-region
 	background-color: $black !important
+.content-region
+	background-color: $dark !important
 div[class*="cardPrimary-"]
-	background-color: #303030 !important
+	background-color: $black !important
 	border-radius: 0
 .sidebar
 	div[class*="item-"]
 		border-radius: 0
-		background-color: #303030 !important
+		background-color: $black !important
 		&:hover
-			background-color: $black !important
+			background-color: $dark !important
 div[class*="side-"] div[class*="itemSelected-"]
-	background-color: $black !important
+	background-color: $dark !important
 .btn-close, div[class*="connection-"], div[class*="connectionDelete-"], button[class*="accountBtnInner-"],
 .Select .Select-control, div[class*="grabber-"], .media-engine-video, div[class*="previewOverlay-"], div[class*="container-"],
 div[class*="checkbox-"], div[class*="ghostPill-"], .user-settings-games .now-playing, .user-settings-games .game-name-input, .add-game-popout,
@@ -412,7 +445,7 @@ span[class*="button-"]
 	top: 15%
 	*/
 div[class*="card-"]:hover:before, .remove-game, .emoji-remove, .revoke-invite
-	background-color: #303030 !important
+	background-color: $black !important
 img[class*="appAvatar"]
 	border-radius: 0
 
@@ -426,7 +459,7 @@ div[class*="flag-"]
 	padding-top: 1px
 
 div[class*="auditLog-"], div[class*="headerExpanded-"]
-	background-color: #303030 !important
+	background-color: $black !important
 	border-radius: 0
 
 
@@ -434,9 +467,9 @@ div[class*="auditLog-"], div[class*="headerExpanded-"]
 #bd-settings-sidebar .ui-tab-bar-item
 	border-radius: 0
 	&:hover
-		background-color: $black
+		background-color: $dark
 	&.selected
-		background-color: $black
+		background-color: $dark
 .bd-pfbtn
 	border-radius: 0 !important
 
@@ -447,12 +480,12 @@ div[class*="auditLog-"], div[class*="headerExpanded-"]
 	margin: 0 .5rem
 	margin-top: 1rem
 	padding: 1rem 1rem 0
-	color: #f5f5f5
+	color: white
 	height: 3rem
 	white-space: pre
 
 //button[type="button"]
-//	background-color: $black !important
+//	background-color: $dark !important
 //// Settings panel--////
 
 ////-- Tweaks ////
