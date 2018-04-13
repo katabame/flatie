@@ -155,7 +155,7 @@ div[class*="overflowRolesPopout-"], .guild-settings-members-filter-popout, div[c
 	& > div[class*="container-"]
 		& > header, & > section
 			border-radius: 0
-div[class*="inner-"] > div[class*="modal-"]
+div[class*="inner-"] > div[class*="modal-"], div[class*="inner-"] > form[class*="modal-"]
 	background-color: $dark
 	border-radius: 0
 
@@ -238,6 +238,54 @@ div[class*="channels-"]
 		margin: 0
 		margin-right: 4px
 
+	div[class*="container-"]
+		div[class*="containerDefault-"]:first-child
+			div[class*="overflowEllipsis-"]
+				display: flex
+				align-items: center
+				&:before
+					content: ""
+					display: inline-block
+					border-bottom: 2px solid #484B51
+					flex: 1
+					margin-right: .5em
+				&:after
+					content: ""
+					display: inline-block
+					border-bottom: 2px solid #484B51
+					flex: 1
+					margin-left: .5em
+			div[class*="nameCollapsed-"], div[class*="nameMuted-"]
+				display: flex
+				align-items: center
+				&:before, &:after
+					border: none
+/*
+		div[class*="containerDefault-"]:first-child
+			padding-top: 10px
+			text-align: center
+			div[class*="nameDefault-"], div[class*="nameHovered-"], div[class*="nameMuted-"]
+				&:before
+					content: "≪"
+					padding-right: .5em
+					vertical-align: 1px
+				&:after
+					content: "≫"
+					padding-left: .5rem
+					vertical-align: 1px
+			&>:first-child
+				//margin: 0 auto
+				//display: table-cell
+				//vertical-align: middle
+				//flex-direction: row-reverse !important
+				/*
+				display: flex
+				justify-content: center
+				flex-direction: row-reverse
+				//padding: 0
+				*/
+
+
 
 header
 	background-color: $dark
@@ -250,10 +298,22 @@ div[class*="avatarSpeaking-"]
 	border-color: transparent !important
 	box-shadow: none !important
 	z-index: 10
-	&::before
+	&:before
 		content: ""
 		position: absolute
 		left: -5px
+		width: 4px
+		height: 20px
+		background: $green
+
+div[class*="listCollapse-"] div[class*="avatarSpeaking-"]
+	border-color: transparent !important
+	box-shadow: none !important
+	z-index: 10
+	&:before
+		content: ""
+		position: absolute
+		left: 3px
 		width: 4px
 		height: 20px
 		background: $green
@@ -266,10 +326,12 @@ div[class*="avatarSpeaking-"]
 .chat
 	& > div[class*="titleWrapper-"] > div
 		background-color: $dark
-	& > .content, .messages-wrapper, form, div[class*="typing-"], .divider span
+	& > .content, .messages-wrapper, form, div[class*="typing-"], .divider span, .divider:before
 		background-color: $ashen !important
 	div[class*="membersWrap-"] div[class*="members-"]
 		background-color: $black
+		div[class*="membersGroup-"]
+			text-align: center
 	& .new-messages-bar, & .jump-to-present-bar
 		border-radius: 0
 	div[class*="member-"]:hover
@@ -289,7 +351,8 @@ div[class*="avatarSpeaking-"]
 
 div[class*="message"]
 	& > .accessory > div[class*="embed-"] > div[class*="embedPill-"],
-	& > .accessory > div[class*="embed-"] > div[class*="embedInner-"]
+	& > .accessory > div[class*="embed-"] > div[class*="embedInner-"],
+	& > .accessory > div[class*="embed-"] > div[class*="embedInner-"] div[class*="embedVideoActionsInner-"] div[class*="wrapper-"]
 		border-radius: 0
 
 div[class*="innerNoAutocomplete-"], div[class*="innerAutocomplete-"]
@@ -432,7 +495,7 @@ div[class*="side-"] div[class*="itemSelected-"]
 .Select .Select-control, div[class*="grabber-"], .media-engine-video, div[class*="previewOverlay-"], div[class*="container-"],
 div[class*="checkbox-"], div[class*="ghostPill-"], .user-settings-games .now-playing, .user-settings-games .game-name-input, .add-game-popout,
 div[class*="card-"]:hover:before, .remove-game, span[class*="questionMark-"], input[class*="input-"], .avatar-uploader-inner, .avatar-uploader-indicator,
-.emoji-remove, div[class*="copyInput-"], button[class*="addButton-"], button[class*="overflowButton-"], .revoke-invite
+.emoji-remove, div[class*="copyInput-"], button[class*="addButton-"], button[class*="overflowButton-"], .revoke-invite, .small-popout-box
 	border-radius: 0 !important
 span[class*="button-"]
 	padding: 0
@@ -502,4 +565,7 @@ div[class*="auditLog-"], div[class*="headerExpanded-"]
 	text-shadow: none
 	box-shadow: none
 	border-radius: 0
+
+div[class*="guildAvatarWithoutIcon-"]
+	text-overflow: clip
 //// Tweaks --////
