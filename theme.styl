@@ -317,7 +317,9 @@ div[class*="listCollapse-"] div[class*="avatarSpeaking-"]
 		width: 4px
 		height: 20px
 		background: $green
-
+div[class*="voiceUserSummaryItem-"] div[class*="avatar-"]
+	mask: none
+	margin-right: .2rem
 
 //// Channel area --////
 
@@ -561,10 +563,11 @@ div[class*="auditLog-"], div[class*="headerExpanded-"]
 	div[class*="bar-"]
 		border-radius: 0
 
-.badge
+.badge, div[class*="badge-"]
 	text-shadow: none
 	box-shadow: none
 	border-radius: 0
+
 
 div[class*="guildAvatarWithoutIcon-"]
 	text-overflow: clip

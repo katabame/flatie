@@ -391,6 +391,11 @@ div[class*="listCollapse-"] div[class*="avatarSpeaking-"]:before {
   height: 20px;
   background: #43b581;
 }
+div[class*="voiceUserSummaryItem-"] div[class*="avatar-"] {
+  -webkit-mask: none;
+  mask: none;
+  margin-right: 0.2rem;
+}
 .chat > div[class*="titleWrapper-"] > div {
   background-color: #202020;
 }
@@ -429,8 +434,8 @@ div[class*="listCollapse-"] div[class*="avatarSpeaking-"]:before {
   margin-left: 1em;
 }
 div[class*="message"] > .accessory > div[class*="embed-"] > div[class*="embedPill-"],
-div[class*="message"] > .accessory > div[class*="embed-"] > div[class*="embedInner-"] div[class*="embedVideoActionsInner-"] div[class*="wrapper-"],
-div[class*="message"] > .accessory > div[class*="embed-"] > div[class*="embedInner-"] {
+div[class*="message"] > .accessory > div[class*="embed-"] > div[class*="embedInner-"],
+div[class*="message"] > .accessory > div[class*="embed-"] > div[class*="embedInner-"] div[class*="embedVideoActionsInner-"] div[class*="wrapper-"] {
   border-radius: 0;
 }
 div[class*="innerNoAutocomplete-"],
@@ -1566,7 +1571,8 @@ div[class*="headerExpanded-"] {
 .unread-mentions-indicator-bottom div[class*="bar-"] {
   border-radius: 0;
 }
-.badge {
+.badge,
+div[class*="badge-"] {
   text-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
