@@ -33,8 +33,9 @@ div[class*="item-"] {
 div[class*="item-"]:hover {
   background-color: #404040 !important;
 }
-div[class*="avatar-small"],
-div[class*="avatar-large"],
+.avatar-small,
+.avatar-large,
+.avatar-xsmall,
 div[class*="avatarDefault-"],
 div[class*="avatarSpeaking-"],
 div[class*="avatar-"] > div[class*="image-"] {
@@ -332,30 +333,6 @@ div[class*="channels-"] div[class*="container-"] div[class*="containerDefault-"]
 div[class*="channels-"] div[class*="container-"] div[class*="containerDefault-"]:first-child div[class*="nameMuted-"]:after {
   border: none;
 }
-/*
-		div[class*="containerDefault-"]:first-child
-			padding-top: 10px
-			text-align: center
-			div[class*="nameDefault-"], div[class*="nameHovered-"], div[class*="nameMuted-"]
-				&:before
-					content: "≪"
-					padding-right: .5em
-					vertical-align: 1px
-				&:after
-					content: "≫"
-					padding-left: .5rem
-					vertical-align: 1px
-			&>:first-child
-				//margin: 0 auto
-				//display: table-cell
-				//vertical-align: middle
-				//flex-direction: row-reverse !important
-				/*
-				display: flex
-				justify-content: center
-				flex-direction: row-reverse
-				//padding: 0
-				*/
 header {
   background-color: #202020;
 }
@@ -602,7 +579,7 @@ div[class*="cardPrimary-"] {
   background-color: #202020 !important;
 }
 div[class*="side-"] div[class*="itemSelected-"] {
-  background-color: #202020 !important;
+  background-color: #404040 !important;
 }
 .btn-close,
 div[class*="connection-"],
@@ -629,19 +606,14 @@ div[class*="copyInput-"],
 button[class*="addButton-"],
 button[class*="overflowButton-"],
 .revoke-invite,
-.small-popout-box {
+.small-popout-box,
+div[class*="side-"] div[class*="item-"],
+button[class*="colorPickerSwatch-"] {
   border-radius: 0 !important;
 }
 span[class*="button-"] {
   padding: 0;
   border-radius: 0;
-/*
-	right: 0
-	margin: 0
-	margin-left: -30px
-	min-height: 100%
-	top: 15%
-	*/
 }
 div[class*="card-"]:hover:before,
 .remove-game,
@@ -666,6 +638,16 @@ div[class*="headerExpanded-"] {
   background-color: #303030 !important;
   border-radius: 0;
 }
+div[class*="switch-"] {
+  height: 15px;
+}
+div[class*="switch-"]:after,
+div[class*="switch-"]:active:after {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+  background-color: transparent;
+}
 #bd-settings-sidebar .ui-tab-bar-item {
   border-radius: 0;
 }
@@ -679,7 +661,7 @@ div[class*="headerExpanded-"] {
   border-radius: 0 !important;
 }
 .sidebar > div[class*="side"]:after {
-  content: 'flatie v0.1.2\A by @katabame#3778';
+  content: 'flatie \A by @katabame#3778';
   display: block;
   background-color: #43b581;
   margin: 0 0.5rem;
@@ -688,6 +670,21 @@ div[class*="headerExpanded-"] {
   color: #fff;
   height: 3rem;
   white-space: pre;
+}
+#bd-settingspane-container .ui-switch-item {
+  height: auto;
+  margin: 2rem 0;
+}
+#bd-settingspane-container .ui-switch-item .ui-switch {
+  height: 15px !important;
+}
+#bd-settingspane-container .ui-switch-item .ui-switch:before {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+  background: transparent !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 .message-group .hljs:before {
   pointer-events: none;

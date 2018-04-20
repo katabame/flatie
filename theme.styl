@@ -5,7 +5,7 @@ flatie
 */
 
 // vars
-$version = "v0.1.2"
+$version = ""
 $green = #43b581
 $orage = #faa61a
 $red = #f04747
@@ -46,7 +46,7 @@ div[class*="contextMenu-"], div[class*="item-"]
 div[class*="item-"]:hover
 	background-color: $ashen !important
 
-div[class*="avatar-small"], div[class*="avatar-large"], div[class*="avatarDefault-"], div[class*="avatarSpeaking-"], div[class*="avatar-"] > div[class*="image-"]
+.avatar-small, .avatar-large, .avatar-xsmall, div[class*="avatarDefault-"], div[class*="avatarSpeaking-"], div[class*="avatar-"] > div[class*="image-"]
 	border-radius: 5px
 div[class*="mask-"], div[class*="maskProfile-"]
 	mask: none
@@ -260,31 +260,6 @@ div[class*="channels-"]
 				align-items: center
 				&:before, &:after
 					border: none
-/*
-		div[class*="containerDefault-"]:first-child
-			padding-top: 10px
-			text-align: center
-			div[class*="nameDefault-"], div[class*="nameHovered-"], div[class*="nameMuted-"]
-				&:before
-					content: "≪"
-					padding-right: .5em
-					vertical-align: 1px
-				&:after
-					content: "≫"
-					padding-left: .5rem
-					vertical-align: 1px
-			&>:first-child
-				//margin: 0 auto
-				//display: table-cell
-				//vertical-align: middle
-				//flex-direction: row-reverse !important
-				/*
-				display: flex
-				justify-content: center
-				flex-direction: row-reverse
-				//padding: 0
-				*/
-
 
 
 header
@@ -492,23 +467,18 @@ div[class*="cardPrimary-"]
 		&:hover
 			background-color: $dark !important
 div[class*="side-"] div[class*="itemSelected-"]
-	background-color: $dark !important
+	background-color: $ashen !important //$dark !important
 .btn-close, div[class*="connection-"], div[class*="connectionDelete-"], button[class*="accountBtnInner-"],
 .Select .Select-control, div[class*="grabber-"], .media-engine-video, div[class*="previewOverlay-"], div[class*="container-"],
 div[class*="checkbox-"], div[class*="ghostPill-"], .user-settings-games .now-playing, .user-settings-games .game-name-input, .add-game-popout,
 div[class*="card-"]:hover:before, .remove-game, span[class*="questionMark-"], input[class*="input-"], .avatar-uploader-inner, .avatar-uploader-indicator,
-.emoji-remove, div[class*="copyInput-"], button[class*="addButton-"], button[class*="overflowButton-"], .revoke-invite, .small-popout-box
+.emoji-remove, div[class*="copyInput-"], button[class*="addButton-"], button[class*="overflowButton-"], .revoke-invite, .small-popout-box,
+div[class*="side-"] div[class*="item-"], button[class*="colorPickerSwatch-"]
 	border-radius: 0 !important
 span[class*="button-"]
 	padding: 0
 	border-radius: 0
-	/*
-	right: 0
-	margin: 0
-	margin-left: -30px
-	min-height: 100%
-	top: 15%
-	*/
+
 div[class*="card-"]:hover:before, .remove-game, .emoji-remove, .revoke-invite
 	background-color: $black !important
 img[class*="appAvatar"]
@@ -526,6 +496,12 @@ div[class*="flag-"]
 div[class*="auditLog-"], div[class*="headerExpanded-"]
 	background-color: $black !important
 	border-radius: 0
+
+div[class*="switch-"]
+	height: 15px
+	&:after, &:active:after
+		transition: none
+		background-color: transparent
 
 
 // BetterDiscord Support
@@ -549,8 +525,16 @@ div[class*="auditLog-"], div[class*="headerExpanded-"]
 	height: 3rem
 	white-space: pre
 
-//button[type="button"]
-//	background-color: $dark !important
+#bd-settingspane-container
+	.ui-switch-item
+		height: auto
+		margin: 2rem 0
+		.ui-switch
+			height: 15px !important
+			&:before
+				transition: none
+				background: transparent !important
+				box-shadow: none !important
 //// Settings panel--////
 
 ////-- Tweaks ////
