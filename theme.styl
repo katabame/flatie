@@ -136,7 +136,7 @@ div[class*="overflowRolesPopout-"], .guild-settings-members-filter-popout, div[c
 		border-radius: 0
 		background-color: $black
 
-.popout
+div[class*="popout"]
 	& > div[class*="userPopout-"]
 		border-radius: 0
 		& > div[class*="footer-"]
@@ -571,4 +571,21 @@ div[class*="auditLog-"], div[class*="headerExpanded-"]
 
 div[class*="guildAvatarWithoutIcon-"]
 	text-overflow: clip
+
+.message-group .avatar-large[style*='/a_'] + .comment .user-name::after
+	content: ''
+	display: inline-block
+	background-image: url(https://discordapp.com/assets/379d2b3171722ef8be494231234da5d1.svg)
+	background-size: contain
+	vertical-align: middle
+	margin-left: .5em
+	margin-top: -.5em
+	background-repeat: no-repeat
+	background-position: center center
+	height: 1.25em
+	width: @height
+
+div[class*="backdrop-"]
+	opacity: .4 !important
+	user-select: none
 //// Tweaks --////

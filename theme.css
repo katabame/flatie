@@ -158,29 +158,29 @@ div[class*="invite-"] {
   border-radius: 0;
   background-color: #303030;
 }
-.popout > div[class*="userPopout-"] {
+div[class*="popout"] > div[class*="userPopout-"] {
   border-radius: 0;
 }
-.popout > div[class*="userPopout-"] > div[class*="footer-"] {
+div[class*="popout"] > div[class*="userPopout-"] > div[class*="footer-"] {
   display: none;
 }
-.popout > div[class*="menu-"] {
+div[class*="popout"] > div[class*="menu-"] {
   background-color: #202020;
   border-radius: 0;
 }
-.popout > div[class*="menu-"] > div[class*="separator-"] {
+div[class*="popout"] > div[class*="menu-"] > div[class*="separator-"] {
   border-color: #404040;
 }
-.popout > div[class*="attachPopout-"] {
+div[class*="popout"] > div[class*="attachPopout-"] {
   background-color: #202020;
   border-radius: 0;
 }
-.popout > div[class*="attachPopout-"] > div[class*="attachPopoutRow-"]:hover {
+div[class*="popout"] > div[class*="attachPopout-"] > div[class*="attachPopoutRow-"]:hover {
   background-color: #303030;
   border-radius: 0;
 }
-.popout > div[class*="container-"] > header,
-.popout > div[class*="container-"] > section {
+div[class*="popout"] > div[class*="container-"] > header,
+div[class*="popout"] > div[class*="container-"] > section {
   border-radius: 0;
 }
 div[class*="inner-"] > div[class*="modal-"],
@@ -1581,4 +1581,24 @@ div[class*="badge-"] {
 div[class*="guildAvatarWithoutIcon-"] {
   -o-text-overflow: clip;
   text-overflow: clip;
+}
+.message-group .avatar-large[style*='/a_'] + .comment .user-name::after {
+  content: '';
+  display: inline-block;
+  background-image: url("https://discordapp.com/assets/379d2b3171722ef8be494231234da5d1.svg");
+  background-size: contain;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  margin-top: -0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 1.25em;
+  width: 1.25em;
+}
+div[class*="backdrop-"] {
+  opacity: 0.4 !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
