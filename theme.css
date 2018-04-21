@@ -172,8 +172,6 @@ div[class*="popoutLeft-"] {
   -webkit-transform: translateX(-115%) translateY(30%) !important;
   -ms-transform: translateX(-115%) translateY(30%) !important;
   transform: translateX(-115%) translateY(30%) !important;
-}
-div[class*="popout-"] {
   top: 0 !important;
 }
 div[class*="popout-"] > div[class*="userPopout-"] {
