@@ -53,15 +53,23 @@ div[class*="mask-"], div[class*="maskProfile-"]
 div[class*="avatarHint-"]
 	border-radius: 5px
 
-div[class*="base-"], li[class*="role-"], div[class*="notice-"], button[class*="button-"], .search .search-bar, .search-popout, .option .search-option:hover,
+div[class*="base-"], div[class*="notice-"], button[class*="button-"], .search .search-bar, .search-popout, .option .search-option:hover,
 div[class*="overflowRolesPopout-"], .guild-settings-members-filter-popout, div[class*="invite-"]
 	border-radius: 0
+
+li[class*="role-"]
+	border-radius: 0
+	cursor: default
 
 .game-invite-embed
 	div[class*="coverImageWrapper-"]
 		border-radius: 0
 	div[class*="coverImage-"]
 		mask: none
+	div[class*="avatarMasked-"]
+		mask-image: none
+		margin: 0
+		margin-right: 4px
 
 .themed-popout
 	border-radius: 0 !important
@@ -136,9 +144,30 @@ div[class*="overflowRolesPopout-"], .guild-settings-members-filter-popout, div[c
 		border-radius: 0
 		background-color: $black
 
-div[class*="popout"]
+div[class*="popoutLeft-"]
+	transform: translateX(-115%) translateY(30%) !important
+
+div[class*="popout-"]
+	top: 0 !important
 	& > div[class*="userPopout-"]
 		border-radius: 0
+		& > div[class*="body-"]
+			max-height: 15rem
+			background-color: $dark
+			contain: layout
+			overflow-y: scroll
+			flex: 1
+			min-height: 1px
+			&::-webkit-scrollbar
+				width: 5px
+			&::-webkit-scrollbar-thumb
+				background-color: $ashen
+				border-radius: 7px
+			&::-webkit-scrollbar-track-piece
+				background-clip: padding-box
+				border: 3px solid $dark
+
+
 		& > div[class*="footer-"]
 			display: none
 	& > div[class*="menu-"]

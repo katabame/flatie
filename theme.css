@@ -50,7 +50,6 @@ div[class*="avatarHint-"] {
   border-radius: 5px;
 }
 div[class*="base-"],
-li[class*="role-"],
 div[class*="notice-"],
 button[class*="button-"],
 .search .search-bar,
@@ -61,12 +60,22 @@ div[class*="overflowRolesPopout-"],
 div[class*="invite-"] {
   border-radius: 0;
 }
+li[class*="role-"] {
+  border-radius: 0;
+  cursor: default;
+}
 .game-invite-embed div[class*="coverImageWrapper-"] {
   border-radius: 0;
 }
 .game-invite-embed div[class*="coverImage-"] {
   -webkit-mask: none;
   mask: none;
+}
+.game-invite-embed div[class*="avatarMasked-"] {
+  -webkit-mask-image: none;
+  mask-image: none;
+  margin: 0;
+  margin-right: 4px;
 }
 .themed-popout {
   border-radius: 0 !important;
@@ -159,29 +168,58 @@ div[class*="invite-"] {
   border-radius: 0;
   background-color: #303030;
 }
-div[class*="popout"] > div[class*="userPopout-"] {
+div[class*="popoutLeft-"] {
+  -webkit-transform: translateX(-115%) translateY(30%) !important;
+  -ms-transform: translateX(-115%) translateY(30%) !important;
+  transform: translateX(-115%) translateY(30%) !important;
+}
+div[class*="popout-"] {
+  top: 0 !important;
+}
+div[class*="popout-"] > div[class*="userPopout-"] {
   border-radius: 0;
 }
-div[class*="popout"] > div[class*="userPopout-"] > div[class*="footer-"] {
+div[class*="popout-"] > div[class*="userPopout-"] > div[class*="body-"] {
+  max-height: 15rem;
+  background-color: #202020;
+  contain: layout;
+  overflow-y: scroll;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 1px;
+}
+div[class*="popout-"] > div[class*="userPopout-"] > div[class*="body-"]::-webkit-scrollbar {
+  width: 5px;
+}
+div[class*="popout-"] > div[class*="userPopout-"] > div[class*="body-"]::-webkit-scrollbar-thumb {
+  background-color: #404040;
+  border-radius: 7px;
+}
+div[class*="popout-"] > div[class*="userPopout-"] > div[class*="body-"]::-webkit-scrollbar-track-piece {
+  background-clip: padding-box;
+  border: 3px solid #202020;
+}
+div[class*="popout-"] > div[class*="userPopout-"] > div[class*="footer-"] {
   display: none;
 }
-div[class*="popout"] > div[class*="menu-"] {
+div[class*="popout-"] > div[class*="menu-"] {
   background-color: #202020;
   border-radius: 0;
 }
-div[class*="popout"] > div[class*="menu-"] > div[class*="separator-"] {
+div[class*="popout-"] > div[class*="menu-"] > div[class*="separator-"] {
   border-color: #404040;
 }
-div[class*="popout"] > div[class*="attachPopout-"] {
+div[class*="popout-"] > div[class*="attachPopout-"] {
   background-color: #202020;
   border-radius: 0;
 }
-div[class*="popout"] > div[class*="attachPopout-"] > div[class*="attachPopoutRow-"]:hover {
+div[class*="popout-"] > div[class*="attachPopout-"] > div[class*="attachPopoutRow-"]:hover {
   background-color: #303030;
   border-radius: 0;
 }
-div[class*="popout"] > div[class*="container-"] > header,
-div[class*="popout"] > div[class*="container-"] > section {
+div[class*="popout-"] > div[class*="container-"] > header,
+div[class*="popout-"] > div[class*="container-"] > section {
   border-radius: 0;
 }
 div[class*="inner-"] > div[class*="modal-"],
