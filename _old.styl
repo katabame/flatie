@@ -1,0 +1,611 @@
+/*
+flatie
+	by @katabame#3778
+	github.com/katabame/flatie
+*/
+
+// vars
+$version = ""
+$green = #43b581
+$orage = #faa61a
+$red = #f04747
+$gray = #747f8d
+
+$white = #f5f5f5
+
+$ashen = #404040
+$black = #303030
+$dark = #202020
+
+////-- Grobal area ////
+// Support Japanese font
+@import url("https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css")
+@import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css")
+body
+	font-family: Whitney, "Helvetica Nene", Helvetica, Arial, sans-serif, "Rounded M+ 1c", "Noto Sans Japanese"
+
+div[class*="scroller-"]::-webkit-scrollbar-thumb, .scroller-wrap ::-webkit-scrollbar-thumb
+	background-color: rgba($gray, .5) !important
+.scroller-wrap ::-webkit-scrollbar-thumb
+	border-color: $ashen !important
+
+.scroller-wrap
+	& ::-webkit-scrollbar-track-piece
+		background-color: $ashen !important
+		border-color: $ashen !important
+
+	& .scroller::-webkit-scrollbar
+		width: 10px
+
+.tooltip
+	border-radius: 0
+
+div[class*="contextMenu-"], div[class*="item-"]
+	border-radius: 0
+	background-color: $dark !important
+div[class*="item-"]:hover
+	background-color: $ashen !important
+
+.avatar-small, .avatar-large, .avatar-xsmall, div[class*="avatarDefault-"], div[class*="avatarSpeaking-"], div[class*="avatar-"] > div[class*="image-"]
+	border-radius: 5px
+div[class*="mask-"], div[class*="maskProfile-"]
+	mask: none
+div[class*="avatarHint-"]
+	border-radius: 5px
+
+div[class*="base-"], div[class*="notice-"], button[class*="button-"], .search .search-bar, .search-popout, .option .search-option:hover,
+div[class*="overflowRolesPopout-"], .guild-settings-members-filter-popout, div[class*="invite-"]
+	border-radius: 0
+
+li[class*="role-"]
+	border-radius: 0
+	cursor: default
+
+.game-invite-embed
+	div[class*="coverImageWrapper-"]
+		border-radius: 0
+	div[class*="coverImage-"]
+		mask: none
+	div[class*="avatarMasked-"]
+		mask-image: none
+		margin: 0
+		margin-right: 4px
+
+.themed-popout
+	border-radius: 0 !important
+	border: none !important
+	.header
+		border-radius: 0 !important
+		background-color: $dark !important
+	.message-group
+		border-radius: 0
+		background-color: $black !important
+		&:hover .action-buttons
+			background-color: $black !important
+			box-shadow: none !important
+			.jump-button
+				border-radius: 0
+				background-color: $ashen !important
+	.scroller-wrap
+		background-color: $black
+		.scroller
+			&::-webkit-scrollbar
+				width: 6px
+			&::-webkit-scrollbar-thumb
+				background-color: $ashen !important
+			&::-webkit-scrollbar-track-piece
+				background-color: $black !important
+				border-color: $black !important
+
+.recent-mentions-popout
+	border-radius: 0 !important
+	background-color: $dark !important
+	.header
+		border-radius: 0 !important
+		background-color: $dark !important
+	.message-group
+		border-radius: 0
+		background-color: $black !important
+		&:hover .action-buttons
+			background-color: $black !important
+			box-shadow: none !important
+			.jump-button
+				border-radius: 0
+				background-color: $ashen !important
+	.has-more button
+		border-radius: 0
+		background-color: $black !important
+
+	.scroller
+		&::-webkit-scrollbar
+			width: 10px !important
+		&::-webkit-scrollbar-thumb
+			background-color: $black !important
+			border-color: $black !important
+		&::-webkit-scrollbar-track-piece
+			background-color: $dark !important
+			border-color: $dark !important
+
+.guild-settings-members-filter-popout
+	background-color: $black !important
+	div[class*="searchBar-"]
+		border-radius: 0
+		background-color: $dark
+	div[class*="scroller-"]
+		&::-webkit-scrollbar-thumb
+			background-color: $ashen !important
+		&::-webkit-scrollbar-track
+			background-color: $black !important
+	div[class*="selected-"]
+		background-color: $dark !important
+		border-radius: 0
+.custom-header
+	div[class*="searchBar-"]
+		border-radius: 0
+		background-color: $black
+
+div[class*="popoutLeft-"]
+	transform: translateX(-115%) translateY(30%) !important
+	//top: 0 !important
+
+div[class*="popout-"]
+	& > div[class*="userPopout-"]
+		border-radius: 0
+		& > div[class*="body-"]
+			max-height: 15rem
+			background-color: $dark
+			contain: layout
+			overflow-y: scroll
+			flex: 1
+			min-height: 1px
+			&::-webkit-scrollbar
+				width: 5px
+			&::-webkit-scrollbar-thumb
+				background-color: $ashen
+				border-radius: 7px
+			&::-webkit-scrollbar-track-piece
+				background-clip: padding-box
+				border: 3px solid $dark
+
+
+		& > div[class*="footer-"]
+			display: none
+	& > div[class*="menu-"]
+		background-color: $dark
+		border-radius: 0
+		& > div[class*="separator-"]
+			border-color: $ashen
+	& > div[class*="attachPopout-"]
+		background-color: $dark
+		border-radius: 0
+		& > div[class*="attachPopoutRow-"]:hover
+			background-color: $black
+			border-radius: 0
+	& > div[class*="container-"]
+		& > header, & > section
+			border-radius: 0
+div[class*="inner-"] > div[class*="modal-"], div[class*="inner-"] > form[class*="modal-"]
+	background-color: $dark
+	border-radius: 0
+
+span[class*="botTag-"]
+	border-radius: 0 !important
+
+// Search area
+.search-popout
+	background-color: $black
+	& .search-query
+		color: #e0e0e0
+		& .search-for strong
+			color: #a0a0a0
+		&.selected
+			color: $ashen
+			& .search-for strong
+				color: #606060
+	.option
+		&:after
+			background: none
+		&.selected
+			border-radius: 0
+			background-color: $white
+			&:after
+				background: none
+			& > .filter, & strong, &.user .display-username
+				color: $ashen
+			& > .answer, & > .non-text, &.user .displayed-nick
+				color: #606060
+		& > .filter, & strong, &.user .display-username
+			color: #e0e0e0
+		& > .answer, & > .non-text, &.user .displayed-nick
+			color: #a0a0a0
+
+div[class*="selectableItem-"]:hover
+	background-color: $ashen !important
+	border-radius: 0
+
+// Friends area
+#friends .tab-bar .tab-bar-item, form[class*="wrapper-"], #friends .btn, .private-channels .channel a, .private-channels .channel a:hover
+	border-radius: 0
+.private-channels header
+	background-color: transparent
+.private-channels .search-bar, div[class*="headerBar-"]
+	background-color: $dark !important
+
+#friends, .friends-table
+	background-color: $ashen !important
+
+div[class*="barInner-"]
+	border-radius: 0
+//// Grobal area--////
+
+////-- Guild area ////
+.guilds-wrapper
+	background-color: $dark
+	.guild
+		&.audio
+			.guild-inner:after
+				border-radius: 5px !important
+				background-color: $gray !important
+				top: -5px
+				right: @top
+
+.guilds-wrapper .guilds .guild .guild-inner, .guilds-wrapper .guilds-error, .guilds-wrapper .guilds-add
+	border-radius: 5px !important
+
+div[class*="channelNotice-"]
+	background-color: $dark !important
+//// Guild area --////
+
+
+////-- Channel area ////
+div[class*="channels-"]
+	& > :first-child
+		background-color: $black !important
+	& > :nth-last-child(1), & > :nth-last-child(2), div[class*="listeningAlong-"]
+		background-color: $dark
+		border: none
+		margin-bottom: 0
+	div[class*="listeningAlong-"] div[class*="avatarMasked-"]
+		mask-image: none
+		margin: 0
+		margin-right: 4px
+
+	div[class*="container-"]
+		div[class*="containerDefault-"]:first-child
+			div[class*="overflowEllipsis-"]
+				display: flex
+				align-items: center
+				&:before
+					content: ""
+					display: inline-block
+					border-bottom: 2px solid #484B51
+					flex: 1
+					margin-right: .5em
+				&:after
+					content: ""
+					display: inline-block
+					border-bottom: 2px solid #484B51
+					flex: 1
+					margin-left: .5em
+			div[class*="nameCollapsed-"], div[class*="nameMuted-"]
+				display: flex
+				align-items: center
+				&:before, &:after
+					border: none
+
+
+header
+	background-color: $dark
+
+div[class*="content-"], div[class*="bar-"]
+	border-radius: 0
+
+// Speaking Indicator
+div[class*="avatarSpeaking-"]
+	border-color: transparent !important
+	box-shadow: none !important
+	z-index: 10
+	&:before
+		content: ""
+		position: absolute
+		left: -5px
+		width: 4px
+		height: 20px
+		background: $green
+
+div[class*="listCollapse-"] div[class*="avatarSpeaking-"]
+	border-color: transparent !important
+	box-shadow: none !important
+	z-index: 10
+	&:before
+		content: ""
+		position: absolute
+		left: 3px
+		width: 4px
+		height: 20px
+		background: $green
+div[class*="voiceUserSummaryItem-"] div[class*="avatar-"]
+	mask: none
+	margin-right: .2rem
+
+//// Channel area --////
+
+
+//// -- Chat area
+.chat
+	& > div[class*="titleWrapper-"] > div
+		background-color: $dark
+	& > .content, .messages-wrapper, form, div[class*="typing-"], .divider span, .divider:before
+		background-color: $ashen !important
+	div[class*="membersWrap-"] div[class*="members-"]
+		background-color: $black
+		div[class*="membersGroup-"]
+			text-align: center
+	& .new-messages-bar, & .jump-to-present-bar
+		border-radius: 0
+	div[class*="member-"]:hover
+		border-radius: 0
+	.is-local-bot-message
+		box-shadow: none !important
+		background-image: none !important
+		background-color: $ashen
+	.divider
+		& > div
+			height: 0
+		& > span
+			&:before
+				content: "≪"
+				vertical-align: 1px
+				margin-right: 1em
+			&:after
+				content: "≫"
+				vertical-align: 1px
+				margin-left: 1em
+
+div[class*="message"]
+	& > .accessory > div[class*="embed-"] > div[class*="embedPill-"],
+	& > .accessory > div[class*="embed-"] > div[class*="embedInner-"],
+	& > .accessory > div[class*="embed-"] > div[class*="embedInner-"] div[class*="embedVideoActionsInner-"] div[class*="wrapper-"]
+		border-radius: 0
+
+div[class*="innerNoAutocomplete-"], div[class*="innerAutocomplete-"]
+	border-radius: 0
+.message-group
+	& .mentioned .message-text:after
+		border-radius: 0
+	& .comment .markup
+		& pre, & code.inline
+			border-radius: 0
+
+div[class*="autocomplete-"], div[class*="selector-"]
+	border-radius: 0
+	background-color: $dark !important
+
+div[class*="selectorSelected-"]
+	background-color: $ashen !important
+
+div[class*="emojiPicker-"]
+	border-radius: 0
+	border: none
+	background-color: $dark !important
+	div[class*="header-"] .search-bar, div[class*="category-"]
+		background-color: $dark !important
+	.search-bar.search-bar-light .search-bar-inner
+		border-radius: 0 !important
+		background-color: $ashen
+
+// BetterDiscord Support
+#bda-qem, #bda-qem > *
+	border-radius: 0 !important
+#bda-qem button
+	background-color: $ashen !important
+	&.active
+		background-color: $dark !important
+
+// Search result
+.search-results-wrap
+	.search-header
+		background-color: $dark !important
+	div[class*="scroller-"]
+		background-color: $black
+		&::-webkit-scrollbar
+			width: 10px !important
+		&::-webkit-scrollbar-thumb
+			background-color: $ashen !important
+		&::-webkit-scrollbar-track
+			background-color: $black !important
+	.pagination
+		.pagination-previous, .pagination-next
+			border-radius: 0 !important
+	.search-results
+		.search-result
+			&:before, &:after
+				background-image: none
+			.hit
+				background-color: $ashen
+				border-radius: 0
+				box-shadow: 0 0 10px 6px $black
+		.jump-button
+			border-radius: 0
+			//background-color: $black !important
+		.channel-name
+			background-color: $black !important
+
+//// Chat area --////
+
+////-- Modals ////
+.create-guild-container.deprecated .create-or-join .form-inner
+	background-color: white
+	border-radius: 0
+	& > header
+		background-color: transparent
+	& .action
+		border-radius: 0
+		& .btn
+			border-radius: 0
+
+div[class*="root-"], div[class*="connectedAccount-"], div[class*="footer-"], div[class*="video-"], div[class*="imageWrapper-"]
+	border-radius: 0
+div[class*="regionSelectFlag-"]
+	border-radius: 5px
+
+div[class*="regionSelectModal-"], div[class*="regionSelectModalOption-"]
+	background-color: $dark !important
+	border-radius: 0 !important
+	border-color: $gray !important
+div[class*="regionSelectName-"]
+	color: $white
+
+div[class*="uploadModal-"]
+	border-radius: 0
+	background-color: $black
+	div[class*="inner-"]
+		border: none
+		div[class*="image-"]
+			border-radius: 0 !important
+			border: none !important
+		div[class*="inner-"]
+			background-color: $dark
+	div[class*="footer-"]
+		background-color: $black
+		& > :first-child
+			background-color: $black
+
+.need-help-modal
+	.header
+		border-radius: 0 !important
+		input[type="text"]
+			border-radius: 0 !important
+			background-color: $black !important
+			border-bottom: none !important
+			color: $white !important
+	.form-inner
+		background-color: $dark !important
+	.footer
+		border-radius: 0 !important
+		background-color: $dark !important
+		border-top: none !important
+
+//// Modals --////
+
+////-- Settings panel ////
+.sidebar-region
+	background-color: $black !important
+.content-region
+	background-color: $dark !important
+div[class*="cardPrimary-"]
+	background-color: $black !important
+	border-radius: 0
+.sidebar
+	div[class*="item-"]
+		border-radius: 0
+		background-color: $black !important
+		&:hover
+			background-color: $dark !important
+div[class*="side-"] div[class*="itemSelected-"]
+	background-color: $ashen !important //$dark !important
+.btn-close, div[class*="connection-"], div[class*="connectionDelete-"], button[class*="accountBtnInner-"],
+.Select .Select-control, div[class*="grabber-"], .media-engine-video, div[class*="previewOverlay-"], div[class*="container-"],
+div[class*="checkbox-"], div[class*="ghostPill-"], .user-settings-games .now-playing, .user-settings-games .game-name-input, .add-game-popout,
+div[class*="card-"]:hover:before, .remove-game, span[class*="questionMark-"], input[class*="input-"], .avatar-uploader-inner, .avatar-uploader-indicator,
+.emoji-remove, div[class*="copyInput-"], button[class*="addButton-"], button[class*="overflowButton-"], .revoke-invite, .small-popout-box,
+div[class*="side-"] div[class*="item-"], button[class*="colorPickerSwatch-"]
+	border-radius: 0 !important
+span[class*="button-"]
+	padding: 0
+	border-radius: 0
+
+div[class*="card-"]:hover:before, .remove-game, .emoji-remove, .revoke-invite
+	background-color: $black !important
+img[class*="appAvatar"]
+	border-radius: 0
+
+button[class*="button-"]
+	margin: 0
+
+div[class*="flag-"]
+	border-radius: 5px
+
+.Select .Select-control div
+	padding-top: 1px
+
+div[class*="auditLog-"], div[class*="headerExpanded-"]
+	background-color: $black !important
+	border-radius: 0
+
+div[class*="switch-"]
+	height: 15px
+	&:after, &:active:after
+		transition: none
+		background-color: transparent
+
+
+// BetterDiscord Support
+#bd-settings-sidebar .ui-tab-bar-item
+	border-radius: 0
+	&:hover
+		background-color: $dark
+	&.selected
+		background-color: $dark
+.bd-pfbtn
+	border-radius: 0 !important
+
+.sidebar > div[class*="side"]:after
+	content: "flatie " + $version + "\A by @katabame#3778"
+	display: block
+	background-color: $green
+	margin: 0 .5rem
+	margin-top: 1rem
+	padding: 1rem 1rem 0
+	color: white
+	height: 3rem
+	white-space: pre
+
+#bd-settingspane-container
+	.ui-switch-item
+		height: auto
+		margin: 2rem 0
+		.ui-switch
+			height: 15px !important
+			&:before
+				transition: none
+				background: transparent !important
+				box-shadow: none !important
+//// Settings panel--////
+
+////-- Tweaks ////
+@import codelang
+
+// Squared Indicator
+.unread-mentions-indicator-bottom
+	div[class*="mention-"]
+		background-color: $red
+	div[class*="bar-"]
+		border-radius: 0
+
+.badge, div[class*="badge-"]
+	text-shadow: none
+	box-shadow: none
+	border-radius: 0
+
+
+div[class*="guildAvatarWithoutIcon-"]
+	text-overflow: clip
+
+.message-group .avatar-large[style*='/a_'] + .comment .user-name::after
+	content: ''
+	display: inline-block
+	background-image: url(https://discordapp.com/assets/379d2b3171722ef8be494231234da5d1.svg)
+	background-size: contain
+	vertical-align: middle
+	margin-left: .5em
+	margin-top: -.5em
+	background-repeat: no-repeat
+	background-position: center center
+	height: 1.25em
+	width: @height
+
+div[class*="backdrop-"]
+	opacity: .4 !important
+	user-select: none
+//// Tweaks --////

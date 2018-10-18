@@ -1,0 +1,875 @@
+/* Codelang
+ * Add language name if language is specified in code block
+ */
+.da-markup
+	.hljs:before
+		pointer-events: none
+		display: block
+		margin: 0 0 10px 0
+
+	.abnf:before
+		content: "ABNF"
+
+	.accesslog:before
+		content: "Access Log"
+
+	.actionscript:before
+		content: "ActionScript"
+
+	.as:before
+		content: "ActionScript"
+
+	.ada:before
+		content: "Ada"
+
+	.apache:before
+		content: "Apache"
+
+	.apacheconf:before
+		content: "Apache"
+
+	.applescript:before
+		content: "Applescript"
+
+	.osascript:before
+		content: "Applescript"
+
+	.arduino:before
+		content: "Arduino"
+
+	.armasm:before
+		content: "ARM Assembly"
+
+	.arm:before
+		content: "ARM Assembly"
+
+	.asciidoc:before
+		content: "AsciiDoc"
+
+	.adoc:before
+		content: "AsciiDoc"
+
+	.aspectj:before
+		content: "AspectJ"
+
+	.atom:before
+		content: "Atom Feed (XML)"
+
+	.autohotkey:before
+		content: "AutoHotkey"
+
+	.autoit:before
+		content: "AutoIt"
+
+	.avrasm:before
+		content: "AVR Assembler"
+
+	.awk:before
+		content: "Awk"
+
+	.mawk:before
+		content: "Awk"
+
+	.nawk:before
+		content: "Awk"
+
+	.gawk:before
+		content: "Awk"
+
+	.axapta:before
+		content: "Axapta"
+
+	.bash:before
+		content: "Bash"
+
+	.sh:before
+		content: "Bash"
+
+	.zsh:before
+		content: "Bash"
+
+	.basic:before
+		content: "Basic"
+
+	.dos:before
+		content: "Batch"
+
+	.bat:before
+		content: "Batch"
+
+	.cmd:before
+		content: "Batch"
+
+	.bnf:before
+		content: "BNF"
+
+	.brainfuck:before
+		content: "Brainfuck"
+
+	.c:before
+		content: "C/C++"
+
+	.cc:before
+		content: "C/C++"
+
+	.cpp:before
+		content: "C/C++"
+
+	.h:before
+		content: "C/C++"
+
+	.hpp:before
+		content: "C/C++"
+
+	.cs:before
+		content: "C#"
+
+	.csharp:before
+		content: "C#"
+
+	.cal:before
+		content: "CAL"
+
+	.capnproto:before
+		content: "Cap'n Proto"
+
+	.capnp:before
+		content: "Cap'n Proto"
+
+	.ceylon:before
+		content: "Ceylon"
+
+	.clean:before
+		content: "Clean"
+
+	.clojure:before
+		content: "Clojure"
+
+	.clj:before
+		content: "Clojure"
+
+	.clojure-repl:before
+		content: "Clojure REPL"
+
+	.cmake:before
+		content: "CMake"
+
+	.coffeescript:before
+		content: "CoffeeScript"
+
+	.coffee:before
+		content: "CoffeeScript"
+
+	.cson:before
+		content: "CoffeeScript"
+
+	.iced:before
+		content: "CoffeeScript"
+
+	.coq:before
+		content: "Coq"
+
+	.cos:before
+		content: "Caché Object Script"
+
+	.cls:before
+		content: "Caché Object Script"
+
+	.podspec:before
+		content: "CocoaPod"
+
+	.crmsh:before
+		content: "crmsh"
+
+	.crm:before
+		content: "crmsh"
+
+	.pcmk:before
+		content: "crmsh"
+
+	.crystal:before
+		content: "Crystal"
+
+	.csp:before
+		content: "CSP"
+
+	.css:before
+		content: "CSS"
+
+	.d:before
+		content: "D"
+
+	.dart:before
+		content: "Dart"
+
+	.delphi:before
+		content: "Delphi (Object Pascal)"
+
+	.dfm:before
+		content: "Delphi (Object Pascal)"
+
+	.dpr:before
+		content: "Delphi (Object Pascal)"
+
+	.diff:before
+		content: "Diff"
+
+	.patch:before
+		content: "Diff"
+
+	.django:before
+		content: "Django"
+
+	.jinja:before
+		content: "Django"
+
+	.dns:before
+		content: "DNS Zone File"
+
+	.dockerfile:before
+		content: "Dockerfile"
+
+	.docker:before
+		content: "Dockerfile"
+
+	.dsconfig:before
+		content: "dsconfig"
+
+	.dts:before
+		content: "Device Tree"
+
+	.dust:before
+		content: "Dust"
+
+	.ebnf:before
+		content: "EBNF"
+
+	.elixir:before
+		content: "Elixir"
+
+	.elm:before
+		content: "Elm"
+
+	.erb:before
+		content: "ERB"
+
+	.erlang:before
+		content: "Erlang"
+
+	.erl:before
+		content: "Erlang"
+
+	.erlang-repl:before
+		content: "Erlang REPL"
+
+	.excel:before
+		content: "Excel"
+
+	.xls:before
+		content: "Excel"
+
+	.xlsx:before
+		content: "Excel"
+
+	.fs:before
+		content: "F#"
+
+	.fsharp:before
+		content: "F#"
+
+	.fix:before
+		content: "Fix"
+
+	.flix:before
+		content: "Flix"
+
+	.fortran:before
+		content: "Fortran"
+
+	.f90:before
+		content: "Fortran"
+
+	.f95:before
+		content: "Fortran"
+
+	.gams:before
+		content: "GAMS"
+
+	.gms:before
+		content: "GAMS"
+
+	.gauss:before
+		content: "Gauss"
+
+	.gss:before
+		content: "Gauss"
+
+	.gcode:before
+		content: "G-code"
+
+	.nc:before
+		content: "G-code"
+
+	.gherkin:before
+		content: "Gherkin"
+
+	.glsl:before
+		content: "GLSL"
+
+	.go:before
+		content: "Go"
+
+	.golang:before
+		content: "Go"
+
+	.golo:before
+		content: "Golo"
+
+	.gololang:before
+		content: "Golo"
+
+	.gradle:before
+		content: "Gradle"
+
+	.groovy:before
+		content: "Groovy"
+
+	.haml:before
+		content: "Haml"
+
+	.handlebars:before
+		content: "Handlebars"
+
+	.hbs:before
+		content: "Handlebars"
+
+	.haskell:before
+		content: "Haskell"
+
+	.hs:before
+		content: "Haskell"
+
+	.haxe:before
+		content: "Haxe"
+
+	.hx:before
+		content: "Haxe"
+
+	.hsp:before
+		content: "HSP"
+
+	.html:before
+		content: "HTML"
+
+	.htmlbars:before
+		content: "HTMLBars"
+
+	.http:before
+		content: "HTTP"
+
+	.https:before
+		content: "HTTPS"
+
+	.hy:before
+		content: "Hy"
+
+	.hylang:before
+		content: "Hy"
+
+	.inform7:before
+		content: "Inform7"
+
+	.i7:before
+		content: "Inform7"
+
+	.ini:before
+		content: "Ini"
+
+	.irpf90:before
+		content: "IRPF90"
+
+	.java:before
+		content: "Java"
+
+	.jsp:before
+		content: "Java"
+
+	.javascript:before
+		content: "JavaScript (Babel)"
+
+	.js:before
+		content: "JavaScript (Babel)"
+
+	.jsx:before
+		content: "JavaScript (Babel)"
+
+	.xjb:before
+		content: "JAXB (XML)"
+
+	.jboss-cli:before
+		content: "JBoss CLI"
+
+	.json:before
+		content: "JSON"
+
+	.julia:before
+		content: "Julia"
+
+	.julia-repl:before
+		content: "Julia REPL"
+
+	.kotlin:before
+		content: "Kotlin"
+
+	.lasso:before
+		content: "Lasso"
+
+	.lassoscript:before
+		content: "Lasso"
+
+	.ls:before
+		content: "Lasso"
+
+	.ldif:before
+		content: "LDIF"
+
+	.leaf:before
+		content: "Leaf"
+
+	.less:before
+		content: "Less"
+
+	.lisp:before
+		content: "Lisp"
+
+	.livecodeserver:before
+		content: "LiveCode Server"
+
+	.livescript:before
+		content: "LiveScript"
+
+	.ls:before
+		content: "LiveScript"
+
+	.llvm:before
+		content: "LLVM IR"
+
+	.lsl:before
+		content: "LSL"
+
+	.lua:before
+		content: "Lua"
+
+	.makefile:before
+		content: "Makefile"
+
+	.mk:before
+		content: "Makefile"
+
+	.mak:before
+		content: "Makefile"
+
+	.markdown:before
+		content: "Markdown"
+
+	.md:before
+		content: "Markdown"
+
+	.mkd:before
+		content: "Markdown"
+
+	.mkdown:before
+		content: "Markdown"
+
+	.mathematica:before
+		content: "Mathematica"
+
+	.mma:before
+		content: "Mathematica"
+
+	.matlab:before
+		content: "MatLab"
+
+	.maxima:before
+		content: "Maxima"
+
+	.mel:before
+		content: "MEL"
+
+	.mercury:before
+		content: "Mercury"
+
+	.mipsasm:before
+		content: "MISP Assembly"
+
+	.mips:before
+		content: "MISP Assembly"
+
+	.routeros:before
+		content: "Microtik RouterOS script"
+
+	.mizar:before
+		content: "Mizar"
+
+	.mojolicious:before
+		content: "Mojolicious"
+
+	.monkey:before
+		content: "Monkey"
+
+	.moonscript:before
+		content: "MoonScript"
+
+	.moon:before
+		content: "MoonScript"
+
+	.n1ql:before
+		content: "N1QL"
+
+	.nginx:before
+		content: "Nginx"
+
+	.nginxconf:before
+		content: "Nginx"
+
+	.nimrod:before
+		content: "Nimrod"
+
+	.nix:before
+		content: "Nix"
+
+	.nsis:before
+		content: "NSIS"
+
+	.objectivec:before
+		content: "Objective-C"
+
+	.ocaml:before
+		content: "OCaml"
+
+	.openscad:before
+		content: "OpenSCAD"
+
+	.scad:before
+		content: "OpenSCAD"
+
+	.ruleslanguage:before
+		content: "Oracle Rules Language"
+
+	.oxygene:before
+		content: "Oxygene"
+
+	.parser3:before
+		content: "Parser3"
+
+	.pascal:before
+		content: "Pascal/Object Pascal"
+
+	.pas:before
+		content: "Pascal/Object Pascal"
+
+	.freepascal:before
+		content: "Pascal/Object Pascal"
+
+	.lazarus:before
+		content: "Pascal/Object Pascal"
+
+	.lfm:before
+		content: "Pascal/Object Pascal"
+
+	.lpr:before
+		content: "Pascal/Object Pascal"
+
+	.perl:before
+		content: "Perl"
+
+	.pl:before
+		content: "Perl"
+
+	.pm:before
+		content: "Perl"
+
+	.pf:before
+		content: "PF"
+
+	.pf.conf:before
+		content: "PF"
+
+	.php:before
+		content: "PHP"
+
+	.php3:before
+		content: "PHP"
+
+	.php4:before
+		content: "PHP"
+
+	.php5:before
+		content: "PHP"
+
+	.php6:before
+		content: "PHP"
+
+	.pony:before
+		content: "Pony"
+
+	.powershell:before
+		content: "PowerShell"
+
+	.ps:before
+		content: "PowerShell"
+
+	.processing:before
+		content: "Processing"
+
+	.prolog:before
+		content: "Prolog"
+
+	.plist:before
+		content: "Property List"
+
+	.protobuf:before
+		content: "Protocol Buffers"
+
+	.puppet:before
+		content: "Puppet"
+
+	.pp:before
+		content: "Puppet"
+
+	.purebasic:before
+		content: "PureBASIC"
+
+	.python:before
+		content: "Python"
+
+	.py:before
+		content: "Python"
+
+	.gyp:before
+		content: "Python"
+
+	.profile:before
+		content: "Python profile"
+
+	.q:before
+		content: "Q"
+
+	.k:before
+		content: "Q"
+
+	.kdb:before
+		content: "Q"
+
+	.qml:before
+		content: "QML"
+
+	.r:before
+		content: "R"
+
+	.rib:before
+		content: "RenderMan RIB"
+
+	.rsl:before
+		content: "RenderMan RSL"
+
+	.roboconf:before
+		content: "Roboconf"
+
+	.graph:before
+		content: "Roboconf"
+
+	.instances:before
+		content: "Roboconf"
+
+	.rss:before
+		content: "RSS Feed (XML)"
+
+	.ruby:before
+		content: "Ruby"
+
+	.rb:before
+		content: "Ruby"
+
+	.thor:before
+		content: "Thor"
+
+	.irb:before
+		content: "IRB"
+
+	.gemspec:before
+		content: "Ruby Gem"
+
+	.rust:before
+		content: "Rust"
+
+	.rs:before
+		content: "Rust"
+
+	.scala:before
+		content: "Scala"
+
+	.scheme:before
+		content: "Scheme"
+
+	.scilab:before
+		content: "Scilab"
+
+	.sci:before
+		content: "Scilab"
+
+	.scss:before
+		content: "SCSS"
+
+	.shell:before
+		content: "Shell"
+
+	.console:before
+		content: "Shell"
+
+	.smali:before
+		content: "Smali"
+
+	.smalltalk:before
+		content: "Smalltalk"
+
+	.st:before
+		content: "Smalltalk"
+
+	.sml:before
+		content: "SML"
+
+	.sqf:before
+		content: "SQF"
+
+	.sql:before
+		content: "SQL"
+
+	.stan:before
+		content: "Stan"
+
+	.stata:before
+		content: "Stata"
+
+	.step21:before
+		content: "STEP Part 21"
+
+	.step:before
+		content: "STEP Part 21"
+
+	.stp:before
+		content: "STEP Part 21"
+
+	.p21:before
+		content: "STEP Part 21"
+
+	.stylus:before
+		content: "Stylus"
+
+	.styl:before
+		content: "Stylus"
+
+	.subunit:before
+		content: "SubUnit"
+
+	.swift:before
+		content: "Swift"
+
+	.taggerscript:before
+		content: "Tagger Script"
+
+	.tap:before
+		content: "TAP"
+
+	.tcl:before
+		content: "Tcl"
+
+	.tk:before
+		content: "Tcl"
+
+	.tex:before
+		content: "TeX"
+
+	.thrift:before
+		content: "Thrift"
+
+	.tp:before
+		content: "TP"
+
+	.twig:before
+		content: "Twig"
+
+	.craftcms:before
+		content: "Twig"
+
+	.typescript:before
+		content: "TypeScript"
+
+	.ts:before
+		content: "TypeScript"
+
+	.vala:before
+		content: "Vala"
+
+	.vbnet:before
+		content: "VB.NET"
+
+	.vb:before
+		content: "VB.NET"
+
+	.vbscript:before
+		content: "VBScript"
+
+	.vbs:before
+		content: "VBScript"
+
+	.verilog:before
+		content: "Verilog"
+
+	.v:before
+		content: "Verilog"
+
+	.vhdl:before
+		content: "VHDL"
+
+	.vim:before
+		content: "Vim Script"
+
+	.x86asm:before
+		content: "x86 Assembly"
+
+	.xl:before
+		content: "XL"
+
+	.tao:before
+		content: "XL"
+
+	.xquery:before
+		content: "XQuery"
+
+	.xq xpath:before
+		content: "XQuery"
+
+	.yaml:before
+		content: "YAML"
+
+	.yml:before
+		content: "YAML"
+
+	.xhtml:before
+		content: "XHTML"
+
+	.xml:before
+		content: "XML"
+
+	.xsd:before
+		content: "XML Schema"
+
+	.xsl:before
+		content: "XSL"
+
+	.zephir:before
+		content: "Zephir"
+
+	.zep:before
+		content: "Zephir"

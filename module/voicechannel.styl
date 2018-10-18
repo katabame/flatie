@@ -1,0 +1,24 @@
+/* VoiceIndicator
+ * Separate speaking indicator to left of avatar
+ */
+div[class*="avatarSpeaking-"]
+	box-shadow: none !important
+	&:before
+		content: ""
+		position: absolute
+		left: 0px
+		width: 4px
+		height: 20px
+		background: #43b581
+		border-radius: 5px
+
+// Bring back to default indicator when list is collapsed
+div[class*="listCollapse-"] div[class*="avatarSpeaking-"]
+	box-shadow: 0 0 0 2px #43b581, inset 0 0 0 1.5px #2f3136 !important
+	&:before
+		background: transparent
+
+// Do not concatenate avatars when list is collapsed
+div[class*="voiceUserSummaryItem-"] div[class*="avatar-"]
+	mask-image: none
+	margin-right: .7rem

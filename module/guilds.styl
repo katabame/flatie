@@ -1,0 +1,15 @@
+/* Guilds
+ * Tweak guilds list
+ */
+
+.da-guilds div[class*="selected-"]
+	// Make selected indicator more thin
+	&::before
+		margin-left: 9px
+		border-radius: 5px
+		width: 5px
+		height: 30px
+		margin-top: -15px
+	// Make selected guild icon more square
+	.da-guildInner
+		border-radius: 5px !important

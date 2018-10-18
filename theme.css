@@ -1,0 +1,944 @@
+/*
+flatie
+	by @katabame#7736
+	github.com/katabame/flatie
+*/
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP");
+@import url("https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c");
+body {
+  font-family: Whitney, "Helvetica Nene", Helvetica, Arial, sans-serif, "Noto Sans JP", "M PLUS Rounded 1c";
+}
+div[class*="containerDefault-"]:first-child div[class*="overflowEllipsis-"] {
+  display: flex;
+  align-items: center;
+}
+div[class*="containerDefault-"]:first-child div[class*="overflowEllipsis-"]::before,
+div[class*="containerDefault-"]:first-child div[class*="overflowEllipsis-"]::after {
+  content: "";
+  display: inline-block;
+  border-bottom: 2px solid #484b51;
+  flex: 1;
+}
+div[class*="containerDefault-"]:first-child div[class*="overflowEllipsis-"]::before {
+  margin-right: 0.5em;
+}
+div[class*="containerDefault-"]:first-child div[class*="overflowEllipsis-"]::after {
+  margin-left: 0.5em;
+}
+div[class*="containerDefault-"]:first-child div[class*="nameCollapsed-"]::before,
+div[class*="containerDefault-"]:first-child div[class*="nameMuted-"]::before,
+div[class*="containerDefault-"]:first-child div[class*="nameCollapsed-"]::after,
+div[class*="containerDefault-"]:first-child div[class*="nameMuted-"]::after {
+  border: none;
+}
+.da-markup .hljs:before {
+  pointer-events: none;
+  display: block;
+  margin: 0 0 10px 0;
+}
+.da-markup .abnf:before {
+  content: "ABNF";
+}
+.da-markup .accesslog:before {
+  content: "Access Log";
+}
+.da-markup .actionscript:before {
+  content: "ActionScript";
+}
+.da-markup .as:before {
+  content: "ActionScript";
+}
+.da-markup .ada:before {
+  content: "Ada";
+}
+.da-markup .apache:before {
+  content: "Apache";
+}
+.da-markup .apacheconf:before {
+  content: "Apache";
+}
+.da-markup .applescript:before {
+  content: "Applescript";
+}
+.da-markup .osascript:before {
+  content: "Applescript";
+}
+.da-markup .arduino:before {
+  content: "Arduino";
+}
+.da-markup .armasm:before {
+  content: "ARM Assembly";
+}
+.da-markup .arm:before {
+  content: "ARM Assembly";
+}
+.da-markup .asciidoc:before {
+  content: "AsciiDoc";
+}
+.da-markup .adoc:before {
+  content: "AsciiDoc";
+}
+.da-markup .aspectj:before {
+  content: "AspectJ";
+}
+.da-markup .atom:before {
+  content: "Atom Feed (XML)";
+}
+.da-markup .autohotkey:before {
+  content: "AutoHotkey";
+}
+.da-markup .autoit:before {
+  content: "AutoIt";
+}
+.da-markup .avrasm:before {
+  content: "AVR Assembler";
+}
+.da-markup .awk:before {
+  content: "Awk";
+}
+.da-markup .mawk:before {
+  content: "Awk";
+}
+.da-markup .nawk:before {
+  content: "Awk";
+}
+.da-markup .gawk:before {
+  content: "Awk";
+}
+.da-markup .axapta:before {
+  content: "Axapta";
+}
+.da-markup .bash:before {
+  content: "Bash";
+}
+.da-markup .sh:before {
+  content: "Bash";
+}
+.da-markup .zsh:before {
+  content: "Bash";
+}
+.da-markup .basic:before {
+  content: "Basic";
+}
+.da-markup .dos:before {
+  content: "Batch";
+}
+.da-markup .bat:before {
+  content: "Batch";
+}
+.da-markup .cmd:before {
+  content: "Batch";
+}
+.da-markup .bnf:before {
+  content: "BNF";
+}
+.da-markup .brainfuck:before {
+  content: "Brainfuck";
+}
+.da-markup .c:before {
+  content: "C/C++";
+}
+.da-markup .cc:before {
+  content: "C/C++";
+}
+.da-markup .cpp:before {
+  content: "C/C++";
+}
+.da-markup .h:before {
+  content: "C/C++";
+}
+.da-markup .hpp:before {
+  content: "C/C++";
+}
+.da-markup .cs:before {
+  content: "C#";
+}
+.da-markup .csharp:before {
+  content: "C#";
+}
+.da-markup .cal:before {
+  content: "CAL";
+}
+.da-markup .capnproto:before {
+  content: "Cap'n Proto";
+}
+.da-markup .capnp:before {
+  content: "Cap'n Proto";
+}
+.da-markup .ceylon:before {
+  content: "Ceylon";
+}
+.da-markup .clean:before {
+  content: "Clean";
+}
+.da-markup .clojure:before {
+  content: "Clojure";
+}
+.da-markup .clj:before {
+  content: "Clojure";
+}
+.da-markup .clojure-repl:before {
+  content: "Clojure REPL";
+}
+.da-markup .cmake:before {
+  content: "CMake";
+}
+.da-markup .coffeescript:before {
+  content: "CoffeeScript";
+}
+.da-markup .coffee:before {
+  content: "CoffeeScript";
+}
+.da-markup .cson:before {
+  content: "CoffeeScript";
+}
+.da-markup .iced:before {
+  content: "CoffeeScript";
+}
+.da-markup .coq:before {
+  content: "Coq";
+}
+.da-markup .cos:before {
+  content: "Caché Object Script";
+}
+.da-markup .cls:before {
+  content: "Caché Object Script";
+}
+.da-markup .podspec:before {
+  content: "CocoaPod";
+}
+.da-markup .crmsh:before {
+  content: "crmsh";
+}
+.da-markup .crm:before {
+  content: "crmsh";
+}
+.da-markup .pcmk:before {
+  content: "crmsh";
+}
+.da-markup .crystal:before {
+  content: "Crystal";
+}
+.da-markup .csp:before {
+  content: "CSP";
+}
+.da-markup .css:before {
+  content: "CSS";
+}
+.da-markup .d:before {
+  content: "D";
+}
+.da-markup .dart:before {
+  content: "Dart";
+}
+.da-markup .delphi:before {
+  content: "Delphi (Object Pascal)";
+}
+.da-markup .dfm:before {
+  content: "Delphi (Object Pascal)";
+}
+.da-markup .dpr:before {
+  content: "Delphi (Object Pascal)";
+}
+.da-markup .diff:before {
+  content: "Diff";
+}
+.da-markup .patch:before {
+  content: "Diff";
+}
+.da-markup .django:before {
+  content: "Django";
+}
+.da-markup .jinja:before {
+  content: "Django";
+}
+.da-markup .dns:before {
+  content: "DNS Zone File";
+}
+.da-markup .dockerfile:before {
+  content: "Dockerfile";
+}
+.da-markup .docker:before {
+  content: "Dockerfile";
+}
+.da-markup .dsconfig:before {
+  content: "dsconfig";
+}
+.da-markup .dts:before {
+  content: "Device Tree";
+}
+.da-markup .dust:before {
+  content: "Dust";
+}
+.da-markup .ebnf:before {
+  content: "EBNF";
+}
+.da-markup .elixir:before {
+  content: "Elixir";
+}
+.da-markup .elm:before {
+  content: "Elm";
+}
+.da-markup .erb:before {
+  content: "ERB";
+}
+.da-markup .erlang:before {
+  content: "Erlang";
+}
+.da-markup .erl:before {
+  content: "Erlang";
+}
+.da-markup .erlang-repl:before {
+  content: "Erlang REPL";
+}
+.da-markup .excel:before {
+  content: "Excel";
+}
+.da-markup .xls:before {
+  content: "Excel";
+}
+.da-markup .xlsx:before {
+  content: "Excel";
+}
+.da-markup .fs:before {
+  content: "F#";
+}
+.da-markup .fsharp:before {
+  content: "F#";
+}
+.da-markup .fix:before {
+  content: "Fix";
+}
+.da-markup .flix:before {
+  content: "Flix";
+}
+.da-markup .fortran:before {
+  content: "Fortran";
+}
+.da-markup .f90:before {
+  content: "Fortran";
+}
+.da-markup .f95:before {
+  content: "Fortran";
+}
+.da-markup .gams:before {
+  content: "GAMS";
+}
+.da-markup .gms:before {
+  content: "GAMS";
+}
+.da-markup .gauss:before {
+  content: "Gauss";
+}
+.da-markup .gss:before {
+  content: "Gauss";
+}
+.da-markup .gcode:before {
+  content: "G-code";
+}
+.da-markup .nc:before {
+  content: "G-code";
+}
+.da-markup .gherkin:before {
+  content: "Gherkin";
+}
+.da-markup .glsl:before {
+  content: "GLSL";
+}
+.da-markup .go:before {
+  content: "Go";
+}
+.da-markup .golang:before {
+  content: "Go";
+}
+.da-markup .golo:before {
+  content: "Golo";
+}
+.da-markup .gololang:before {
+  content: "Golo";
+}
+.da-markup .gradle:before {
+  content: "Gradle";
+}
+.da-markup .groovy:before {
+  content: "Groovy";
+}
+.da-markup .haml:before {
+  content: "Haml";
+}
+.da-markup .handlebars:before {
+  content: "Handlebars";
+}
+.da-markup .hbs:before {
+  content: "Handlebars";
+}
+.da-markup .haskell:before {
+  content: "Haskell";
+}
+.da-markup .hs:before {
+  content: "Haskell";
+}
+.da-markup .haxe:before {
+  content: "Haxe";
+}
+.da-markup .hx:before {
+  content: "Haxe";
+}
+.da-markup .hsp:before {
+  content: "HSP";
+}
+.da-markup .html:before {
+  content: "HTML";
+}
+.da-markup .htmlbars:before {
+  content: "HTMLBars";
+}
+.da-markup .http:before {
+  content: "HTTP";
+}
+.da-markup .https:before {
+  content: "HTTPS";
+}
+.da-markup .hy:before {
+  content: "Hy";
+}
+.da-markup .hylang:before {
+  content: "Hy";
+}
+.da-markup .inform7:before {
+  content: "Inform7";
+}
+.da-markup .i7:before {
+  content: "Inform7";
+}
+.da-markup .ini:before {
+  content: "Ini";
+}
+.da-markup .irpf90:before {
+  content: "IRPF90";
+}
+.da-markup .java:before {
+  content: "Java";
+}
+.da-markup .jsp:before {
+  content: "Java";
+}
+.da-markup .javascript:before {
+  content: "JavaScript (Babel)";
+}
+.da-markup .js:before {
+  content: "JavaScript (Babel)";
+}
+.da-markup .jsx:before {
+  content: "JavaScript (Babel)";
+}
+.da-markup .xjb:before {
+  content: "JAXB (XML)";
+}
+.da-markup .jboss-cli:before {
+  content: "JBoss CLI";
+}
+.da-markup .json:before {
+  content: "JSON";
+}
+.da-markup .julia:before {
+  content: "Julia";
+}
+.da-markup .julia-repl:before {
+  content: "Julia REPL";
+}
+.da-markup .kotlin:before {
+  content: "Kotlin";
+}
+.da-markup .lasso:before {
+  content: "Lasso";
+}
+.da-markup .lassoscript:before {
+  content: "Lasso";
+}
+.da-markup .ls:before {
+  content: "Lasso";
+}
+.da-markup .ldif:before {
+  content: "LDIF";
+}
+.da-markup .leaf:before {
+  content: "Leaf";
+}
+.da-markup .less:before {
+  content: "Less";
+}
+.da-markup .lisp:before {
+  content: "Lisp";
+}
+.da-markup .livecodeserver:before {
+  content: "LiveCode Server";
+}
+.da-markup .livescript:before {
+  content: "LiveScript";
+}
+.da-markup .ls:before {
+  content: "LiveScript";
+}
+.da-markup .llvm:before {
+  content: "LLVM IR";
+}
+.da-markup .lsl:before {
+  content: "LSL";
+}
+.da-markup .lua:before {
+  content: "Lua";
+}
+.da-markup .makefile:before {
+  content: "Makefile";
+}
+.da-markup .mk:before {
+  content: "Makefile";
+}
+.da-markup .mak:before {
+  content: "Makefile";
+}
+.da-markup .markdown:before {
+  content: "Markdown";
+}
+.da-markup .md:before {
+  content: "Markdown";
+}
+.da-markup .mkd:before {
+  content: "Markdown";
+}
+.da-markup .mkdown:before {
+  content: "Markdown";
+}
+.da-markup .mathematica:before {
+  content: "Mathematica";
+}
+.da-markup .mma:before {
+  content: "Mathematica";
+}
+.da-markup .matlab:before {
+  content: "MatLab";
+}
+.da-markup .maxima:before {
+  content: "Maxima";
+}
+.da-markup .mel:before {
+  content: "MEL";
+}
+.da-markup .mercury:before {
+  content: "Mercury";
+}
+.da-markup .mipsasm:before {
+  content: "MISP Assembly";
+}
+.da-markup .mips:before {
+  content: "MISP Assembly";
+}
+.da-markup .routeros:before {
+  content: "Microtik RouterOS script";
+}
+.da-markup .mizar:before {
+  content: "Mizar";
+}
+.da-markup .mojolicious:before {
+  content: "Mojolicious";
+}
+.da-markup .monkey:before {
+  content: "Monkey";
+}
+.da-markup .moonscript:before {
+  content: "MoonScript";
+}
+.da-markup .moon:before {
+  content: "MoonScript";
+}
+.da-markup .n1ql:before {
+  content: "N1QL";
+}
+.da-markup .nginx:before {
+  content: "Nginx";
+}
+.da-markup .nginxconf:before {
+  content: "Nginx";
+}
+.da-markup .nimrod:before {
+  content: "Nimrod";
+}
+.da-markup .nix:before {
+  content: "Nix";
+}
+.da-markup .nsis:before {
+  content: "NSIS";
+}
+.da-markup .objectivec:before {
+  content: "Objective-C";
+}
+.da-markup .ocaml:before {
+  content: "OCaml";
+}
+.da-markup .openscad:before {
+  content: "OpenSCAD";
+}
+.da-markup .scad:before {
+  content: "OpenSCAD";
+}
+.da-markup .ruleslanguage:before {
+  content: "Oracle Rules Language";
+}
+.da-markup .oxygene:before {
+  content: "Oxygene";
+}
+.da-markup .parser3:before {
+  content: "Parser3";
+}
+.da-markup .pascal:before {
+  content: "Pascal/Object Pascal";
+}
+.da-markup .pas:before {
+  content: "Pascal/Object Pascal";
+}
+.da-markup .freepascal:before {
+  content: "Pascal/Object Pascal";
+}
+.da-markup .lazarus:before {
+  content: "Pascal/Object Pascal";
+}
+.da-markup .lfm:before {
+  content: "Pascal/Object Pascal";
+}
+.da-markup .lpr:before {
+  content: "Pascal/Object Pascal";
+}
+.da-markup .perl:before {
+  content: "Perl";
+}
+.da-markup .pl:before {
+  content: "Perl";
+}
+.da-markup .pm:before {
+  content: "Perl";
+}
+.da-markup .pf:before {
+  content: "PF";
+}
+.da-markup .pf.conf:before {
+  content: "PF";
+}
+.da-markup .php:before {
+  content: "PHP";
+}
+.da-markup .php3:before {
+  content: "PHP";
+}
+.da-markup .php4:before {
+  content: "PHP";
+}
+.da-markup .php5:before {
+  content: "PHP";
+}
+.da-markup .php6:before {
+  content: "PHP";
+}
+.da-markup .pony:before {
+  content: "Pony";
+}
+.da-markup .powershell:before {
+  content: "PowerShell";
+}
+.da-markup .ps:before {
+  content: "PowerShell";
+}
+.da-markup .processing:before {
+  content: "Processing";
+}
+.da-markup .prolog:before {
+  content: "Prolog";
+}
+.da-markup .plist:before {
+  content: "Property List";
+}
+.da-markup .protobuf:before {
+  content: "Protocol Buffers";
+}
+.da-markup .puppet:before {
+  content: "Puppet";
+}
+.da-markup .pp:before {
+  content: "Puppet";
+}
+.da-markup .purebasic:before {
+  content: "PureBASIC";
+}
+.da-markup .python:before {
+  content: "Python";
+}
+.da-markup .py:before {
+  content: "Python";
+}
+.da-markup .gyp:before {
+  content: "Python";
+}
+.da-markup .profile:before {
+  content: "Python profile";
+}
+.da-markup .q:before {
+  content: "Q";
+}
+.da-markup .k:before {
+  content: "Q";
+}
+.da-markup .kdb:before {
+  content: "Q";
+}
+.da-markup .qml:before {
+  content: "QML";
+}
+.da-markup .r:before {
+  content: "R";
+}
+.da-markup .rib:before {
+  content: "RenderMan RIB";
+}
+.da-markup .rsl:before {
+  content: "RenderMan RSL";
+}
+.da-markup .roboconf:before {
+  content: "Roboconf";
+}
+.da-markup .graph:before {
+  content: "Roboconf";
+}
+.da-markup .instances:before {
+  content: "Roboconf";
+}
+.da-markup .rss:before {
+  content: "RSS Feed (XML)";
+}
+.da-markup .ruby:before {
+  content: "Ruby";
+}
+.da-markup .rb:before {
+  content: "Ruby";
+}
+.da-markup .thor:before {
+  content: "Thor";
+}
+.da-markup .irb:before {
+  content: "IRB";
+}
+.da-markup .gemspec:before {
+  content: "Ruby Gem";
+}
+.da-markup .rust:before {
+  content: "Rust";
+}
+.da-markup .rs:before {
+  content: "Rust";
+}
+.da-markup .scala:before {
+  content: "Scala";
+}
+.da-markup .scheme:before {
+  content: "Scheme";
+}
+.da-markup .scilab:before {
+  content: "Scilab";
+}
+.da-markup .sci:before {
+  content: "Scilab";
+}
+.da-markup .scss:before {
+  content: "SCSS";
+}
+.da-markup .shell:before {
+  content: "Shell";
+}
+.da-markup .console:before {
+  content: "Shell";
+}
+.da-markup .smali:before {
+  content: "Smali";
+}
+.da-markup .smalltalk:before {
+  content: "Smalltalk";
+}
+.da-markup .st:before {
+  content: "Smalltalk";
+}
+.da-markup .sml:before {
+  content: "SML";
+}
+.da-markup .sqf:before {
+  content: "SQF";
+}
+.da-markup .sql:before {
+  content: "SQL";
+}
+.da-markup .stan:before {
+  content: "Stan";
+}
+.da-markup .stata:before {
+  content: "Stata";
+}
+.da-markup .step21:before {
+  content: "STEP Part 21";
+}
+.da-markup .step:before {
+  content: "STEP Part 21";
+}
+.da-markup .stp:before {
+  content: "STEP Part 21";
+}
+.da-markup .p21:before {
+  content: "STEP Part 21";
+}
+.da-markup .stylus:before {
+  content: "Stylus";
+}
+.da-markup .styl:before {
+  content: "Stylus";
+}
+.da-markup .subunit:before {
+  content: "SubUnit";
+}
+.da-markup .swift:before {
+  content: "Swift";
+}
+.da-markup .taggerscript:before {
+  content: "Tagger Script";
+}
+.da-markup .tap:before {
+  content: "TAP";
+}
+.da-markup .tcl:before {
+  content: "Tcl";
+}
+.da-markup .tk:before {
+  content: "Tcl";
+}
+.da-markup .tex:before {
+  content: "TeX";
+}
+.da-markup .thrift:before {
+  content: "Thrift";
+}
+.da-markup .tp:before {
+  content: "TP";
+}
+.da-markup .twig:before {
+  content: "Twig";
+}
+.da-markup .craftcms:before {
+  content: "Twig";
+}
+.da-markup .typescript:before {
+  content: "TypeScript";
+}
+.da-markup .ts:before {
+  content: "TypeScript";
+}
+.da-markup .vala:before {
+  content: "Vala";
+}
+.da-markup .vbnet:before {
+  content: "VB.NET";
+}
+.da-markup .vb:before {
+  content: "VB.NET";
+}
+.da-markup .vbscript:before {
+  content: "VBScript";
+}
+.da-markup .vbs:before {
+  content: "VBScript";
+}
+.da-markup .verilog:before {
+  content: "Verilog";
+}
+.da-markup .v:before {
+  content: "Verilog";
+}
+.da-markup .vhdl:before {
+  content: "VHDL";
+}
+.da-markup .vim:before {
+  content: "Vim Script";
+}
+.da-markup .x86asm:before {
+  content: "x86 Assembly";
+}
+.da-markup .xl:before {
+  content: "XL";
+}
+.da-markup .tao:before {
+  content: "XL";
+}
+.da-markup .xquery:before {
+  content: "XQuery";
+}
+.da-markup .xq xpath:before {
+  content: "XQuery";
+}
+.da-markup .yaml:before {
+  content: "YAML";
+}
+.da-markup .yml:before {
+  content: "YAML";
+}
+.da-markup .xhtml:before {
+  content: "XHTML";
+}
+.da-markup .xml:before {
+  content: "XML";
+}
+.da-markup .xsd:before {
+  content: "XML Schema";
+}
+.da-markup .xsl:before {
+  content: "XSL";
+}
+.da-markup .zephir:before {
+  content: "Zephir";
+}
+.da-markup .zep:before {
+  content: "Zephir";
+}
+.da-embedPill,
+.da-embedInner {
+  border-radius: 0;
+}
+.da-guilds div[class*="selected-"]::before {
+  margin-left: 9px;
+  border-radius: 5px;
+  width: 5px;
+  height: 30px;
+  margin-top: -15px;
+}
+.da-guilds div[class*="selected-"] .da-guildInner {
+  border-radius: 5px !important;
+}
+.da-membersGroup {
+  text-align: center;
+}
+div[class*="avatarSpeaking-"] {
+  box-shadow: none !important;
+}
+div[class*="avatarSpeaking-"]:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 4px;
+  height: 20px;
+  background: #43b581;
+  border-radius: 5px;
+}
+div[class*="listCollapse-"] div[class*="avatarSpeaking-"] {
+  box-shadow: 0 0 0 2px #43b581, inset 0 0 0 1.5px #2f3136 !important;
+}
+div[class*="listCollapse-"] div[class*="avatarSpeaking-"]:before {
+  background: transparent;
+}
+div[class*="voiceUserSummaryItem-"] div[class*="avatar-"] {
+  mask-image: none;
+  margin-right: 0.7rem;
+}

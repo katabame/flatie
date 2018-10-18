@@ -1,0 +1,22 @@
+/* Channnels
+ * Tweak channels list
+ */
+
+// Center category name, Add bars
+div[class*="containerDefault-"]:first-child
+	div[class*="overflowEllipsis-"]
+		display: flex
+		align-items: center
+		&::before, &::after
+			content: ""
+			display: inline-block
+			border-bottom: 2px solid #484B51
+			flex: 1
+		&::before
+			margin-right: .5em
+		&::after
+			margin-left: .5em
+	// Hide bars if category is collapsed or muted
+	div[class*="nameCollapsed-"], div[class*="nameMuted-"]
+		&::before, &::after
+			border: none
