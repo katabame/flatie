@@ -1,0 +1,39 @@
+/* UserPopout
+ * Tweak user popout
+ */
+ 
+ // Make role square
+.da-role
+	border-radius: 0
+button[class*="addButton-"]
+	border-radius: 0
+
+// Hide protip
+.da-protip
+	display: none
+
+// Use black header when playing game
+.da-headerPlaying
+	background-color: #202225
+
+// Big status indicator
+.da-statusProfile
+	background-color: transparent
+	width: 100%
+	height: @width
+	box-shadow: none !important
+	border: 5px solid rgba(0, 0, 0, 0)
+	bottom: -4.5px
+	right: -5px
+	&.da-online
+		border-color: #43b581
+	&.da-idle
+		border-color: #faa61a
+	&.da-dnd
+		border-color: #f04747
+&.da-maskProfile
+	-webkit-mask: none
+
+// Kill the Wumpus
+.da-wumpusWrapper
+	display: none

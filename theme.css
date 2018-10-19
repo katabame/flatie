@@ -920,13 +920,52 @@ div[class*="containerDefault-"]:first-child div[class*="nameMuted-"]::after {
 .da-membersGroup {
   text-align: center;
 }
+.da-botTag {
+  border-radius: 0;
+}
+.da-role {
+  border-radius: 0;
+}
+button[class*="addButton-"] {
+  border-radius: 0;
+}
+.da-protip {
+  display: none;
+}
+.da-headerPlaying {
+  background-color: #202225;
+}
+.da-statusProfile {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  box-shadow: none !important;
+  border: 5px solid rgba(0,0,0,0);
+  bottom: -4.5px;
+  right: -5px;
+}
+.da-statusProfile.da-online {
+  border-color: #43b581;
+}
+.da-statusProfile.da-idle {
+  border-color: #faa61a;
+}
+.da-statusProfile.da-dnd {
+  border-color: #f04747;
+}
+.da-maskProfile {
+  -webkit-mask: none;
+}
+.da-wumpusWrapper {
+  display: none;
+}
 div[class*="avatarSpeaking-"] {
   box-shadow: none !important;
 }
 div[class*="avatarSpeaking-"]:before {
   content: "";
   position: absolute;
-  left: 0px;
+  left: 0;
   width: 4px;
   height: 20px;
   background: #43b581;
@@ -938,7 +977,13 @@ div[class*="listCollapse-"] div[class*="avatarSpeaking-"] {
 div[class*="listCollapse-"] div[class*="avatarSpeaking-"]:before {
   background: transparent;
 }
-div[class*="voiceUserSummaryItem-"] div[class*="avatar-"] {
-  mask-image: none;
-  margin-right: 0.7rem;
+.da-voiceUserSummaryItem {
+  flex-wrap: wrap;
+}
+.da-voiceUserSummaryItem .da-avatar {
+  -webkit-mask-image: none;
+  margin: 0.3rem;
+}
+.da-voiceUserSummaryItem .da-moreUsers {
+  margin: 0.3rem;
 }

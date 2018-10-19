@@ -1,1 +1,1 @@
-stylus -w theme.styl
+stylus --watch theme.styl

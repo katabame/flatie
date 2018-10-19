@@ -6,7 +6,7 @@ div[class*="avatarSpeaking-"]
 	&:before
 		content: ""
 		position: absolute
-		left: 0px
+		left: 0
 		width: 4px
 		height: 20px
 		background: #43b581
@@ -19,6 +19,10 @@ div[class*="listCollapse-"] div[class*="avatarSpeaking-"]
 		background: transparent
 
 // Do not concatenate avatars when list is collapsed
-div[class*="voiceUserSummaryItem-"] div[class*="avatar-"]
-	mask-image: none
-	margin-right: .7rem
+.da-voiceUserSummaryItem
+	flex-wrap: wrap
+	.da-avatar
+		-webkit-mask-image: none
+		margin: .3rem
+	.da-moreUsers
+		margin: .3rem
