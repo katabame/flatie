@@ -31,6 +31,22 @@ div[class*="containerDefault-"]:first-child div[class*="nameCollapsed-"]::after,
 div[class*="containerDefault-"]:first-child div[class*="nameMuted-"]::after {
   border: none;
 }
+.da-embedPill,
+.da-embedInner {
+  border-radius: 0;
+}
+.da-embedVideoActions .da-wrapper {
+  border-radius: 0;
+}
+.da-isMentioned::after {
+  border-radius: 0;
+}
+.da-newMessagesBar {
+  border-radius: 0;
+}
+.da-imageWrapper {
+  border-radius: 0;
+}
 .da-markup .hljs:before {
   pointer-events: none;
   display: block;
@@ -903,10 +919,6 @@ div[class*="containerDefault-"]:first-child div[class*="nameMuted-"]::after {
 .da-markup .zep:before {
   content: "Zephir";
 }
-.da-embedPill,
-.da-embedInner {
-  border-radius: 0;
-}
 .da-guilds div[class*="selected-"]::before {
   margin-left: 9px;
   border-radius: 5px;
@@ -917,11 +929,37 @@ div[class*="containerDefault-"]:first-child div[class*="nameMuted-"]::after {
 .da-guilds div[class*="selected-"] .da-guildInner {
   border-radius: 5px !important;
 }
+.da-guildsWrapper .da-scroller {
+  margin-top: 4.5rem;
+  padding-top: 0;
+}
+div[class*="guild-"]:first-child {
+  position: fixed;
+  top: 2rem;
+}
+.da-privateChannels div[class*="channel-"]:first-child {
+  display: none;
+}
 .da-membersGroup {
   text-align: center;
 }
 .da-botTag {
   border-radius: 0;
+}
+.da-modal {
+  border-radius: 0;
+}
+.da-modal .da-root {
+  border-radius: 0;
+}
+.da-connectedAccount {
+  border-radius: 0;
+}
+.da-userInfoSection + .da-userInfoSection {
+  border: none;
+}
+.da-topSectionPlaying {
+  background-color: #202225;
 }
 .da-role {
   border-radius: 0;
@@ -929,7 +967,13 @@ div[class*="containerDefault-"]:first-child div[class*="nameMuted-"]::after {
 button[class*="addButton-"] {
   border-radius: 0;
 }
+.da-footer {
+  border: none;
+}
 .da-protip {
+  display: none;
+}
+.isBlocked.da-quickMessage {
   display: none;
 }
 .da-headerPlaying {
