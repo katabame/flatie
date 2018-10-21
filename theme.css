@@ -31,11 +31,17 @@ div[class*="containerDefault-"]:first-child div[class*="nameCollapsed-"]::after,
 div[class*="containerDefault-"]:first-child div[class*="nameMuted-"]::after {
   border: none;
 }
+.da-containerDefault:nth-child(2) {
+  margin-top: 0.5rem;
+}
 .da-embedPill,
 .da-embedInner {
   border-radius: 0;
 }
 .da-embedVideoActions .da-wrapper {
+  border-radius: 0;
+}
+.da-reaction {
   border-radius: 0;
 }
 .da-isMentioned::after {
@@ -46,6 +52,26 @@ div[class*="containerDefault-"]:first-child div[class*="nameMuted-"]::after {
 }
 .da-imageWrapper {
   border-radius: 0;
+}
+.da-unread:not(.da-unreadTop,
+.da-unreadBottom) {
+  left: 5px;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+}
+.da-divider:not(.da-dividerRed) {
+  display: none;
+}
+.da-dividerContent::before,
+.da-dividerContent::after {
+  border: none;
+  flex: none;
+  margin-top: -1.15rem;
+}
+.da-dividerContent::after {
+  content: "≫";
+  margin-left: 4px;
 }
 .da-markup .hljs:before {
   pointer-events: none;
@@ -919,6 +945,31 @@ div[class*="containerDefault-"]:first-child div[class*="nameMuted-"]::after {
 .da-markup .zep:before {
   content: "Zephir";
 }
+.tooltip {
+  border-radius: 0;
+}
+.da-botTag {
+  border-radius: 0;
+}
+.da-popouts > .da-popout {
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+.da-popouts > .da-popout header {
+  background-color: #212121;
+  border-radius: 0;
+}
+.da-popouts > .da-popout section {
+  border-radius: 0;
+  background-color: #212121;
+}
+.da-popouts > .da-popout section::before {
+  border: none;
+}
+.da-popouts > .da-popout section::after {
+  border-top-color: #212121;
+}
 .da-guilds div[class*="selected-"]::before {
   margin-left: 9px;
   border-radius: 5px;
@@ -928,6 +979,11 @@ div[class*="containerDefault-"]:first-child div[class*="nameMuted-"]::after {
 }
 .da-guilds div[class*="selected-"] .da-guildInner {
   border-radius: 5px !important;
+  background-color: transparent !important;
+}
+.da-badge {
+  border-radius: 0;
+  box-shadow: none;
 }
 .da-guildsWrapper .da-scroller {
   margin-top: 4.5rem;
@@ -937,14 +993,16 @@ div[class*="guild-"]:first-child {
   position: fixed;
   top: 2rem;
 }
+div[class*="unread-"]:not([class*="selected-"])::before {
+  width: 7px;
+  height: 7px;
+  left: -8px;
+}
 .da-privateChannels div[class*="channel-"]:first-child {
   display: none;
 }
 .da-membersGroup {
   text-align: center;
-}
-.da-botTag {
-  border-radius: 0;
 }
 .da-modal {
   border-radius: 0;
@@ -958,13 +1016,25 @@ div[class*="guild-"]:first-child {
 .da-userInfoSection + .da-userInfoSection {
   border: none;
 }
+.da-tabBarContainer {
+  border: none;
+}
 .da-topSectionPlaying {
   background-color: #202225;
+}
+.da-button {
+  border-radius: 0;
+}
+.tab-bar-item {
+  border-bottom-width: 3px !important;
 }
 .da-role {
   border-radius: 0;
 }
 button[class*="addButton-"] {
+  border-radius: 0;
+}
+.da-userPopout {
   border-radius: 0;
 }
 .da-footer {

@@ -10,13 +10,27 @@
 		width: 5px
 		height: 30px
 		margin-top: -15px
-	// Make selected guild icon more square
 	.da-guildInner
+		// Make selected guild icon more square
 		border-radius: 5px !important
+		// Transparent icon background
+		background-color: transparent !important
 
+// Make badge square
+.da-badge
+	border-radius: 0
+	box-shadow: none
+
+// Fix discord home button
 .da-guildsWrapper .da-scroller
 	margin-top: 4.5rem
 	padding-top: 0
 div[class*="guild-"]:first-child
 	position: fixed
 	top: 2rem
+
+// Make unread indicator circle
+div[class*="unread-"]:not([class*="selected-"])::before
+	width: 7px
+	height: @width
+	left: -8px

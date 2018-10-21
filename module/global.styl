@@ -1,0 +1,28 @@
+/* Global
+ * Non-categorizable tweaks
+ */
+
+// Make tooltip square
+.tooltip
+	border-radius: 0
+
+// Make bot tag square
+.da-botTag
+	border-radius: 0
+
+// [Beta] Flat popup (ex. connection info)
+.da-popouts > .da-popout
+	border-radius: 0
+	border: none
+	box-shadow: none
+	$_color = #212121
+	header
+		background-color: $_color
+		border-radius: 0
+	section
+		border-radius: 0
+		background-color: $_color
+		&::before
+			border: none
+		&::after
+			border-top-color: $_color

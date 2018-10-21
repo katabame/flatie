@@ -8,6 +8,10 @@
 .da-embedVideoActions .da-wrapper
 	border-radius: 0
 
+// Make reaction button square
+.da-reaction
+	border-radius: 0
+
 // Make mention square
 .da-isMentioned::after
 	border-radius: 0
@@ -19,3 +23,28 @@
 // Make attached image square
 .da-imageWrapper
 	border-radius: 0
+
+// Make unread indicator circle
+.da-unread:not(.da-unreadTop, .da-unreadBottom)
+	left: 5px
+	border-radius: 50%
+	width: 7px
+	height: @width
+
+// Hide chat divider
+.da-divider:not(.da-dividerRed)
+	display: none
+
+.da-dividerContent
+	&::before, &::after
+		border: none
+		flex: none
+		margin-top: -1.15rem
+	/*
+	&::before
+		content: "≫"
+		margin-right: 4px
+	*/
+	&::after
+		content: "≫"
+		margin-left: 4px
