@@ -3,7 +3,8 @@ flatie is theme for discord
 
 ### Install
 1. Install [Bandaged BD](https://github.com/rauenzi/BetterDiscordApp/releases/latest) to your Discord.
-1. Download [flatie.theme.css](https://github.com/katabame/flatie/blob/master/flatie.theme.css)
+1. Make sure you have checked `User Settings -> BandagedBD -> Zere's Fork -> Normalize Classes`.
+1. Download [flatie.theme.css](https://github.com/katabame/flatie/blob/rewrite/flatie.theme.css)
 1. Place css to `BetterDiscord\themes`
 1. Restart Discord and enable theme.
 1. That's all. This theme will update automatically.
@@ -14,7 +15,7 @@ flatie is now moduled-theme. You can customize and compile by yourself for makin
 	* Node 10.12 or higher: `npm install katabame/stylus#node_v10.12.0 -g` to install
 	* Node 10.11 or lower: `npm install katabame/stylus#dev -g` to install
 1. Customize `theme.styl`
-	* Of Course, use your favorite editor! (I prefer [VSCode](https://code.visualstudio.com/) or [nano](https://www.nano-editor.org/))
+	* Of Course, use your favorite editor! (I prefer [VSCode](https://code.visualstudio.com/) or [nano](https://www.nano-editor.org/). Here is my [.nanorc](https://github.com/katabame/.files/blob/master/.nanorc)!)
 1. Compile
 	* Run `stylus theme.styl`
 1. Load your own theme
@@ -22,6 +23,14 @@ flatie is now moduled-theme. You can customize and compile by yourself for makin
 
 ### Issues? Bugs? Ideas?
 Submit issue. That's why github here.
+
+### Forked Themes
+* Nothing here yet. Be the first one!
+
+### Contacts
+* Twitter: [@katabame](https://twitter.com/katabame)
+* Discord: @katabame#7736
+* E-mail: [mail@kataba.me](mailto://mail@kataba.me)
 
 ### SpecialThanks
 * [@motitaiyaki](https://github.com/motitaiyaki)
